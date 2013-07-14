@@ -1,0 +1,14 @@
+[ui]
+username = Birunthan Mohanathas <birunthan@mohanathas.com>
+
+[defaults]
+qnew = -UDe
+
+[extensions]
+mq =
+
+[diff]
+git = 1
+showfunc = 1
+unified = 8
+
