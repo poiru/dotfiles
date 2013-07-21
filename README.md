@@ -2,7 +2,8 @@ These are my dotfiles.
 
 ### Install
 
-To install, `cd` into this directory and run `./install.sh`.
+To install, `cd` into this directory and run `./install.sh`. Bash 4 or higher
+is required.
 
 
 ### Credits
