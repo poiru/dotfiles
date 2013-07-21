@@ -2,13 +2,20 @@
 username = Birunthan Mohanathas <birunthan@mohanathas.com>
 
 [defaults]
-qnew = -UDe
+qnew = -Ue
 
 [extensions]
 mq =
+color =
 
 [diff]
 git = 1
 showfunc = 1
 unified = 8
+
+[paths]
+moztry = ssh://hg.mozilla.org/try
+
+[hooks]
+post-push = hg phase --force --draft "mq()"
 
