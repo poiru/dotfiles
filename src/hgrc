@@ -19,3 +19,5 @@ moztry = ssh://hg.mozilla.org/try
 [hooks]
 post-push = hg phase --force --draft "mq()"
 
+[hostfingerprints]
+hg.mozilla.org = 10:78:e8:57:2d:95:de:7c:de:90:bd:22:e1:38:17:67:c5:a7:9c:14
