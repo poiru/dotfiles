@@ -17,7 +17,6 @@ set cursorline " Highlight current line
 
 set showmatch " Show matching brackets/parenthesis
 set hlsearch " Highlight search terms
-" spf13
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
