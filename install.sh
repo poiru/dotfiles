@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -A map
+map["src/bashrc"]=".bashrc"
 map["src/gitconfig"]=".gitconfig"
 map["src/hgrc"]=".hgrc"
 map["src/vim"]=".vim"
