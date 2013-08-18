@@ -36,6 +36,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Enable color support for `ls` and others.
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias grep='grep --color=auto'
+fi
+
 export TERM=xterm-256color
 export EDITOR=vim
 
@@ -44,7 +52,6 @@ alias c=cd
 alias g=git
 alias h=hg
 alias m=mv
-alias mc=mv
 alias s=sudo
 alias v=vim
 
