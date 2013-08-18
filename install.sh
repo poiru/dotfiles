@@ -16,7 +16,6 @@ do
     echo "WARNING: $target exists and is not a symlink."
   else
     echo "Creating $target"
-    unlink "$target"
-    ln -s "$source" "$target"
+    ln -fs "$source" "$target"
   fi
 done
