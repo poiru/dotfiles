@@ -13,9 +13,12 @@ do
   source="$PWD/$file"
   target="$HOME/${map[$file]}"
   if [ -e "$target" ] && [ ! -L "$target" ]; then
-    echo "WARNING: $target exists and is not a symlink."
-  else
-    echo "Creating $target"
-    ln -fs "$source" "$target"
+    read -r -p "Non-symlink $target already exists. Overwrite [y/n]? " yn
+    if [[ ! $yn =~ ^[Yy]$ ]]; then
+      continue
+    fi
   fi
+
+  echo "Creating $target"
+  ln -fs "$source" "$target"
 done
