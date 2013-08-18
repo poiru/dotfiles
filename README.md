@@ -5,6 +5,8 @@ These are my dotfiles.
 To install, `cd` into this directory and run `./install.sh`. Bash 4 or higher
 is required.
 
+On Windows, symlinks for `.gitconfig` and `.hgrc` can be created by running
+`install.bat`.
 
 ### Credits
 
