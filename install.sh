@@ -12,12 +12,11 @@ for file in "${!map[@]}"
 do
   source="$PWD/$file"
   target="$HOME/${map[$file]}"
-  if [ -e "$target" ]; then
-    if [ ! -L "$target" ]; then
-      echo "WARNING: $target exists and is not a symlink."
-    fi
+  if [ -e "$target" ] && [ ! -L "$target" ]; then
+    echo "WARNING: $target exists and is not a symlink."
   else
     echo "Creating $target"
+    unlink "$target"
     ln -s "$source" "$target"
   fi
 done
