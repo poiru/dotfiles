@@ -1,0 +1,4 @@
+! Map Caps_Lock to AltGr.
+remove Lock = Caps_Lock
+keysym Caps_Lock = ISO_Level3_Shift
+add Lock = Caps_Lock

@@ -7,6 +7,8 @@ map["src/.hgrc"]=".hgrc"
 map["src/.vim"]=".vim"
 map["src/.vimrc"]=".vimrc"
 map["src/.xfce-terminalrc"]=".config/Terminal/terminalrc"
+map["src/.xmodmaprc"]=".xmodmaprc"
+map["src/.xsessionrc"]=".xsessionrc"
 
 for file in "${!map[@]}"
 do
