@@ -22,5 +22,6 @@ do
     fi
 
     echo "Creating symlink $target"
-    ln -fs "$source" "$target"
+    unlink "$target"
+    ln -s "$source" "$target"
 done
