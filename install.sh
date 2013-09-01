@@ -12,15 +12,15 @@ map["src/.xsessionrc"]=".xsessionrc"
 
 for file in "${!map[@]}"
 do
-  source="$PWD/$file"
-  target="$HOME/${map[$file]}"
-  if [ -e "$target" ] && [ ! -L "$target" ]; then
-    read -r -p "Non-symlink $target already exists. Overwrite [y/n]? " yn
-    if [[ ! $yn =~ ^[Yy]$ ]]; then
-      continue
+    source="$PWD/$file"
+    target="$HOME/${map[$file]}"
+    if [ -e "$target" ] && [ ! -L "$target" ]; then
+        read -r -p "Non-symlink $target already exists. Overwrite [y/n]? " yn
+        if [[ ! $yn =~ ^[Yy]$ ]]; then
+            continue
+        fi
     fi
-  fi
 
-  echo "Creating $target"
-  ln -fs "$source" "$target"
+    echo "Creating symlink $target"
+    ln -fs "$source" "$target"
 done
