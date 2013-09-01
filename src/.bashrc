@@ -20,20 +20,17 @@ esac
 
 # If this is an xterm set the title to user@host:dir.
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;\u@\h: \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ "
-    ;;
-*)
-    ;;
+    xterm*|rxvt*) PS1="\[\e]0;\u@\h: \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
+               *) ;;
 esac
 
 # Enable programmable completion features.
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 # Enable color support for `ls` and others.
@@ -57,5 +54,5 @@ alias v=vim
 
 # Helpful functions.
 function md() {
-  [ -n "$1" ] && mkdir -p "$1" && cd "$1";
+    [ -n "$1" ] && mkdir -p "$1" && cd "$1";
 }
