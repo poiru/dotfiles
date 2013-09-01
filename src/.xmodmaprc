@@ -2,3 +2,14 @@
 remove Lock = Caps_Lock
 keysym Caps_Lock = ISO_Level3_Shift
 add Lock = Caps_Lock
+
+! Map the first row (QWERTY...) keys so that AltGr+"Key" is equal to
+! Shift+"Key on top left". For example, AltGr+Q is mapped to "!".
+keycode 24 = q Q q Q exclam NoSymbol exclam
+keycode 25 = w W w W quotedbl NoSymbol quotedbl
+keycode 28 = t T t T percent NoSymbol percent
+keycode 29 = y Y y Y ampersand NoSymbol ampersand
+keycode 30 = u U u U slash NoSymbol slash
+keycode 31 = i I i I parenleft NoSymbol parenleft
+keycode 32 = o O o O parenright NoSymbol parenright
+keycode 33 = p P p P equal NoSymbol equal
