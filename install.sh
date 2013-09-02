@@ -4,6 +4,7 @@ declare -A map
 map["src/.bashrc"]=".bashrc"
 map["src/.gitconfig"]=".gitconfig"
 map["src/.hgrc"]=".hgrc"
+map["src/.inputrc"]=".inputrc"
 map["src/.vim"]=".vim"
 map["src/.vimrc"]=".vimrc"
 map["src/.xfce-terminalrc"]=".config/Terminal/terminalrc"

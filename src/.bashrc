@@ -13,6 +13,14 @@ shopt -s checkwinsize
 shopt -s globstar
 shopt -s autocd
 
+# When in command mode, keep the cursor at the end of the line when using the
+# up/down arrows.
+bind -m vi-command '"\201": previous-history'
+bind -m vi-command '"\202": next-history'
+bind -m vi-command '"\203": end-of-line'
+bind -m vi-command '"\e[A": "\201\203"'
+bind -m vi-command '"\e[B": "\202\203"'
+
 # Set a fancy prompt (non-color, unless we know we "want" color).
 case "$TERM" in
     xterm-color) color_prompt=yes;;
