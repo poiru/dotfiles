@@ -23,6 +23,8 @@ do
     fi
 
     echo "Creating symlink $target"
-    unlink "$target"
+    if [ -L "$target" ]; then
+        unlink "$target"
+    fi
     ln -s "$source" "$target"
 done
