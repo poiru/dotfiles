@@ -13,3 +13,10 @@ keycode 30 = u U u U slash NoSymbol slash
 keycode 31 = i I i I parenleft NoSymbol parenleft
 keycode 32 = o O o O parenright NoSymbol parenright
 keycode 33 = p P p P equal NoSymbol equal
+
+! Map the "Å" key to Shift.
+keycode 34 = Shift_L
+add Shift = Shift_L
+
+! Map the "§" key to Escape.
+keycode 49 = Escape NoSymbol Escape
