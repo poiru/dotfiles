@@ -7,6 +7,9 @@ scriptencoding utf-8
 set virtualedit=onemore
 set history=200
 
+set nobackup
+set nowritebackup
+
 " UI
 
 set term=xterm-256color
