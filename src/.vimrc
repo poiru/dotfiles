@@ -9,6 +9,7 @@ set history=200
 
 " UI
 
+set term=xterm-256color
 set background=dark
 colorscheme solarized
 
