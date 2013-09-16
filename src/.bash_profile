@@ -24,7 +24,11 @@ alias g=git
 alias h=hg
 alias m=mv
 alias s=sudo
+alias sr='screen -rD'
 alias v=vim
+
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # Helpful functions.
 function md() {
