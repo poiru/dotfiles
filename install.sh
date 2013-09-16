@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -A map
+map["src/.bash_profile"]=".bash_profile"
 map["src/.bashrc"]=".bashrc"
 map["src/.gitconfig"]=".gitconfig"
 map["src/.hgrc"]=".hgrc"
@@ -26,5 +27,5 @@ do
     if [ -L "$target" ]; then
         unlink "$target"
     fi
-    ln -s "$source" "$target"
+    ln -fs "$source" "$target"
 done

@@ -4,22 +4,7 @@ case $- in
       *) return;;
 esac
 
-HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-shopt -s histappend
-shopt -s checkwinsize
-shopt -s globstar
-shopt -s autocd
-
-# When in command mode, keep the cursor at the end of the line when using the
-# up/down arrows.
-bind -m vi-command '"\201": previous-history'
-bind -m vi-command '"\202": next-history'
-bind -m vi-command '"\203": end-of-line'
-bind -m vi-command '"\e[A": "\201\203"'
-bind -m vi-command '"\e[B": "\202\203"'
+. ~/.bash_profile
 
 # Set a fancy prompt (non-color, unless we know we "want" color).
 case "$TERM" in
@@ -48,19 +33,3 @@ if [ -x /usr/bin/dircolors ]; then
     alias dir='dir --color=auto'
     alias grep='grep --color=auto'
 fi
-
-export TERM=xterm-256color
-export EDITOR=vim
-
-# Alias definitions.
-alias c=cd
-alias g=git
-alias h=hg
-alias m=mv
-alias s=sudo
-alias v=vim
-
-# Helpful functions.
-function md() {
-    [ -n "$1" ] && mkdir -p "$1" && cd "$1";
-}
