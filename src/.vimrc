@@ -24,7 +24,8 @@ set hlsearch " Highlight search terms
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
-au BufRead,BufNewFile *.jsm setfiletype javascript
-
 set whichwrap+=<,>,h,l,[,]
 set autoindent
+
+au BufRead,BufNewFile *.jsm set filetype=javascript
+au BufRead,BufNewFile *.rs,*.rc set filetype=rust
