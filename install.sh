@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function make_link() {
-    local source="$PWD/$1"
+    local source="$PWD/src/$1"
     local target=$([ $# == 2 ] && echo "$HOME/$2" || echo "$HOME/$1")
 
     # Ensure that target directory exists.
