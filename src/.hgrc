@@ -5,8 +5,9 @@ username = Birunthan Mohanathas <birunthan@mohanathas.com>
 qnew = -Ue
 
 [extensions]
-mq =
 color =
+mq =
+purge =
 
 [diff]
 git = 1
