@@ -2,7 +2,7 @@
 username = Birunthan Mohanathas <birunthan@mohanathas.com>
 
 [defaults]
-qnew = -Ue
+qnew = -U
 
 [extensions]
 color =
