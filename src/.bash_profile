@@ -2,7 +2,6 @@ set -o vi
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
-shopt -s autocd
 
 # When in command mode, keep the cursor at the end of the line when using the
 # up/down arrows.
@@ -27,6 +26,7 @@ alias s=sudo
 alias sr='screen -rD'
 alias v=vim
 
+alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
