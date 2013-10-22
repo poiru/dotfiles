@@ -12,6 +12,7 @@ bind -m vi-command '"\e[A": "\201\203"'
 bind -m vi-command '"\e[B": "\202\203"'
 
 export EDITOR=vim
+export PATH=$PATH:~/bin
 
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
