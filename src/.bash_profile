@@ -20,6 +20,7 @@ HISTFILESIZE=2000
 
 # Alias definitions.
 alias c=cd
+alias cb='xclip -selection c'
 alias g=git
 alias h=hg
 alias m=mv
