@@ -28,3 +28,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias dir='dir --color=auto'
     alias grep='grep --color=auto'
 fi
+
+# Alias definitions (local only).
+alias sk='ssh -t k screen -D -RR'
