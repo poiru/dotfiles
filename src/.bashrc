@@ -6,11 +6,6 @@ esac
 
 . ~/.bash_profile
 
-# Set a fancy prompt (non-color, unless we know we "want" color).
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
-
 # If this is an xterm set the title to user@host:dir.
 case "$TERM" in
     xterm*|rxvt*) PS1="\[\e]0;\u@\h: \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
