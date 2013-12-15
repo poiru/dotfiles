@@ -14,6 +14,7 @@ set noswapfile
 " Solarized theme.
 set term=xterm-256color
 set background=dark
+let g:solarized_menu=0
 colorscheme solarized
 
 set guicursor+=a:blinkon0
