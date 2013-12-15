@@ -1,31 +1,39 @@
-" General
-
-filetype plugin indent on
 syntax on
 scriptencoding utf-8
+
+filetype plugin indent on
 
 set virtualedit=onemore
 set history=200
 
+" Disable backups and swapfiles.
 set nobackup
 set nowritebackup
+set noswapfile
 
-" UI
-
+" Solarized theme.
 set term=xterm-256color
 set background=dark
 colorscheme solarized
 
-set number " Line numbers on
-set cursorline " Highlight current line
+set guicursor+=a:blinkon0
 
-set showmatch " Show matching brackets/parenthesis
-set hlsearch " Highlight search terms
+" Show line numbers and highlight current line.
+set number
+set cursorline
+
+" Show matching brackets/parenthesis.
+set showmatch
+
+" Highlight search terms.
+set hlsearch
+
+" Highlight problematic whitespace
 set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 set whichwrap+=<,>,h,l,[,]
 set autoindent
 
 au BufRead,BufNewFile *.jsm set filetype=javascript
-au BufRead,BufNewFile *.rs,*.rc set filetype=rust
+au BufRead,BufNewFile *.rs,*.rc set filetype=rust et ts=4 sw=4
