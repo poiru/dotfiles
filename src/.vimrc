@@ -36,5 +36,9 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set whichwrap+=<,>,h,l,[,]
 set autoindent
 
+set pastetoggle=<F1>
+
+au BufRead,BufNewFile *.cpp,*.h set et ts=2 sw=2
 au BufRead,BufNewFile *.jsm set filetype=javascript
+au BufRead,BufNewFile *.pl set et ts=4 sw=4
 au BufRead,BufNewFile *.rs,*.rc set filetype=rust et ts=4 sw=4
