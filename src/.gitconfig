@@ -3,11 +3,14 @@
 	email = birunthan@mohanathas.com
 
 [alias]
-	st = status -s
-	ci = commit
-	ciam = commit -a -m
-	puum = pull upstream master
-	psom = push origin master
+	c = commit
+	ca = git commit --amend --no-edit
+	cam = git commit --amend
+	h = show
+	s = status -s --ignore-submodules
+	p = pull --rebase
+	plu = pull upstream master
+	pso = push origin master
 	br = branch
 	co = checkout
 	lg = log --pretty=oneline
