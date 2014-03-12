@@ -3,17 +3,17 @@
 	email = birunthan@mohanathas.com
 
 [alias]
+	br = branch
 	c = commit
 	ca = git commit --amend --no-edit
 	cam = git commit --amend
+	co = checkout
 	h = show
-	s = status -s --ignore-submodules
-	p = pull --rebase
+	lg = log --pretty=oneline
+	p = pull -r
 	plu = pull upstream master
 	pso = push origin master
-	br = branch
-	co = checkout
-	lg = log --pretty=oneline
+	s = status -s --ignore-submodules
 
 [color]
 	ui = true
