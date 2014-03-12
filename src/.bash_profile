@@ -23,8 +23,6 @@ alias c=cd
 alias cb='xclip -selection c'
 alias g=git
 alias h=hg
-alias m=mv
-alias s=sudo
 alias sr='screen -rD'
 alias v=vim
 
