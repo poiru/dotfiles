@@ -7,12 +7,17 @@ qnew = -U
 [extensions]
 color =
 mq =
+pager =
 purge =
 
 [diff]
 git = 1
 showfunc = 1
 unified = 8
+
+[pager]
+pager = LESS='FSRX' less
+ignore = version, help, update, serve, record
 
 [paths]
 moztry = ssh://hg.mozilla.org/try
