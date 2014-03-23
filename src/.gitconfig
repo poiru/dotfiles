@@ -9,7 +9,7 @@
 	cam = git commit --amend
 	co = checkout
 	h = show
-	lg = log --pretty=oneline
+	lg = log --format='%C(yellow)%h%Creset %Cgreen%cr%Creset %s (%an)%C(yellow)%d%Creset'
 	p = pull -r
 	plu = pull upstream master
 	pso = push origin master
