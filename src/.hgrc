@@ -17,7 +17,7 @@ showfunc = 1
 unified = 8
 
 [pager]
-pager = LESS='FSRX' less
+pager = less -FSRX
 ignore = version, help, update, serve, record
 
 [paths]
