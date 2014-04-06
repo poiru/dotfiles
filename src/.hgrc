@@ -1,6 +1,13 @@
 [ui]
 username = Birunthan Mohanathas <birunthan@mohanathas.com>
 
+[alias]
+p = !$HG qpop -a && $HG pull -u
+uc = update -C
+qpr = !$HG qpush && $HG qref
+qs = qseries -s
+qstatus = status --rev -2:.
+
 [defaults]
 qnew = -UD
 qrefresh = -D
