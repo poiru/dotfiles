@@ -9,8 +9,7 @@ qs = qseries -s
 qstatus = status --rev -2:.
 
 [defaults]
-qnew = -UD
-qrefresh = -D
+qnew = -U
 
 [extensions]
 color =
