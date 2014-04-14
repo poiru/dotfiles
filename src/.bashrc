@@ -1,7 +1,8 @@
 # If this is an xterm set the title to user@host:dir.
 case "$TERM" in
-    xterm*|rxvt*) PS1="\[\e]0;\u@\h: \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
-               *) ;;
+    xterm*) PS1="\[\e]0;\u@\h: \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
+    screen) PS1="\[\e]0;\u@\h (screen): \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
+    *) ;;
 esac
 
 set -o vi
