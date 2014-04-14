@@ -35,6 +35,7 @@ alias cb='xclip -selection c'
 alias g=git
 alias h=hg
 alias sr='screen -rD'
+alias sk='ssh -t k screen -D -RR'
 alias v=vim
 
 alias ..='cd ..'
@@ -46,13 +47,26 @@ function md() {
     [ -n "$1" ] && mkdir -p "$1" && cd "$1";
 }
 
-# Enable programmable completion features.
+# Enable auto-completion.
 if ! shopt -oq posix; then
+    # To speed up bash initialization, this is set to a non-existent directory
+    # to avoid loading all the useless completion scripts found in
+    # /etc/bash_completion.d/.
+    if [ -z "${BASH_COMPLETION_COMPAT_DIR}" ]; then
+        BASH_COMPLETION_COMPAT_DIR="/none"
+    fi
+
     if [ -f /usr/share/bash-completion/bash_completion ]; then
         . /usr/share/bash-completion/bash_completion
     elif [ -f /etc/bash_completion ]; then
         . /etc/bash_completion
     fi
+
+    # Explicitly load the useful completion scripts.
+    for i in git mercurial; do
+        i=/etc/bash_completion.d/$i
+        [[ -f $i && -r $i ]] && . "$i"
+    done
 fi
 
 # Enable color support for `ls` and others.
@@ -62,6 +76,3 @@ if [ -x /usr/bin/dircolors ]; then
     alias dir='dir --color=auto'
     alias grep='grep --color=auto'
 fi
-
-# Alias definitions (local only).
-alias sk='ssh -t k screen -D -RR'
