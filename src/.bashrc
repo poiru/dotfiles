@@ -9,6 +9,10 @@ shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
 
+HISTCONTROL=ignoreboth:erasedups
+HISTSIZE=1000
+HISTFILESIZE=2000
+
 # When in command mode, keep the cursor at the end of the line when using the
 # up/down arrows.
 bind -m vi-command '"\201": previous-history'
@@ -19,10 +23,6 @@ bind -m vi-command '"\e[B": "\202\203"'
 
 export EDITOR=vim
 export PATH=$PATH:~/local/bin
-
-HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
 
 # Alias definitions.
 alias c=cd
