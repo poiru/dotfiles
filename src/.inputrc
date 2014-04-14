@@ -1,2 +1,4 @@
-set editing-mode vi
 set completion-ignore-case on
+set editing-mode vi
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
