@@ -22,6 +22,10 @@ bind -m vi-command '"\203": end-of-line'
 bind -m vi-command '"\e[A": "\201\203"'
 bind -m vi-command '"\e[B": "\202\203"'
 
+bind '"\C-l": clear-screen'
+bind '"\ea": beginning-of-line'
+bind '"\e.": insert-last-argument'
+
 export EDITOR=vim
 export PATH=$PATH:~/local/bin
 
