@@ -4,5 +4,8 @@ set show-all-if-ambiguous on
 set show-all-if-unmodified on
 
 "\C-l": clear-screen
+"\C-j": menu-complete
+"\C-k": menu-complete-backward
 "\ea": beginning-of-line
+"\ee": end-of-line
 "\e.": insert-last-argument
