@@ -2,3 +2,7 @@ set completion-ignore-case on
 set editing-mode vi
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
+
+"\C-l": clear-screen
+"\ea": beginning-of-line
+"\e.": insert-last-argument
