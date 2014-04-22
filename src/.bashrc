@@ -14,6 +14,9 @@ HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# Disable flow control (CTRL+S/CTRL+Q).
+stty -ixon
+
 # When in command mode, keep the cursor at the end of the line when using the
 # up/down arrows.
 bind -m vi-command '"\201": previous-history'
