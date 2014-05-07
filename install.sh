@@ -43,6 +43,7 @@ function link_common() {
 function link_local() {
     make_link ".xfce-terminalrc" ".config/Terminal/terminalrc"
     make_link ".xmodmaprc"
+    make_link ".xscreensaver"
     make_link ".xsessionrc"
 }
 
