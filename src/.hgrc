@@ -16,6 +16,7 @@ color =
 mq =
 pager =
 purge =
+rebase =
 
 [diff]
 git = 1
