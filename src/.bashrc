@@ -29,6 +29,9 @@ export EDITOR=vim
 export PATH=$PATH:~/local/bin
 
 # Alias definitions.
+alias adu='sudo apt-get update &&
+           sudo apt-get dist-upgrade &&
+           sudo apt-get autoremove'
 alias c=cd
 alias cb='xclip -selection c'
 alias g=git
