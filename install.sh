@@ -38,6 +38,10 @@ function link_common() {
     make_link ".inputrc"
     make_link ".vim"
     make_link ".vimrc"
+
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        make_link ".amethyst"
+    fi
 }
 
 function link_local() {
