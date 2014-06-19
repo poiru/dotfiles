@@ -37,7 +37,6 @@ alias adu='sudo apt-get update &&
            sudo apt-get dist-upgrade &&
            sudo apt-get autoremove'
 alias c=cd
-alias cb='xclip -selection c'
 alias g=git
 alias h=hg
 alias sr='screen -rD'
@@ -47,6 +46,11 @@ alias v=vim
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
+alias cb='xclip -selection c'
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias cb='pbcopy'
+fi
 
 # Helpful functions.
 function md() {
