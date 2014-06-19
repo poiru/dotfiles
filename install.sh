@@ -45,11 +45,16 @@ function link_common() {
 }
 
 function link_local() {
-    make_link ".fonts.conf" ".config/fontconfig/fonts.conf"
-    make_link ".xfce-terminalrc" ".config/Terminal/terminalrc"
-    make_link ".xmodmaprc"
-    make_link ".xscreensaver"
-    make_link ".xsessionrc"
+    if [[ "$OSTYPE" == "linux-gnu" ]]; then
+        make_link ".fonts.conf" ".config/fontconfig/fonts.conf"
+        make_link ".xfce-terminalrc" ".config/Terminal/terminalrc"
+        make_link ".xmodmaprc"
+        make_link ".xscreensaver"
+        make_link ".xsessionrc"
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        make_link "sublime-text/Preferences.sublime-settings" "Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+        make_link "sublime-text/JavaScript.sublime-settings" "Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings"
+    fi
 }
 
 function link_remote() {

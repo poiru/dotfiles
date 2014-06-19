@@ -1,0 +1,27 @@
+{
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"mozilla*/obj-*",
+		"mozilla*/addon-sdk",
+		"mozilla*/gfx/angle",
+		"mozilla*/gfx/cairo",
+		"mozilla*/gfx/graphite2",
+		"mozilla*/gfx/harfbuzz",
+		"mozilla*/gfx/ots",
+		"mozilla*/gfx/qcms",
+		"mozilla*/gfx/skia",
+		"mozilla*/intl/icu",
+		"mozilla*/media",
+		"mozilla*/modules/freetype2",
+		"mozilla*/modules/libbz2",
+		"mozilla*/modules/libmar",
+		"mozilla*/modules/zlib",
+		"mozilla*/testing/gtest/gmock",
+		"mozilla*/testing/gtest/gtest",
+		"mozilla*/other-licenses"
+	],
+}
