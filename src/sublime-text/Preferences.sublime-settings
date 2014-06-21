@@ -1,10 +1,15 @@
 {
+	"color_scheme": "Packages/Solarized/Solarized (dark).tmTheme",
+	"draw_white_space": "all",
 	"folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		".hg",
 		"CVS",
+		"mozilla*/build/stlport",
+		"mozilla*/db/sqlite3/src",
+		"mozilla*/ipc/chromium/src/third_party",
 		"mozilla*/obj-*",
 		"mozilla*/addon-sdk",
 		"mozilla*/gfx/angle",
@@ -24,4 +29,6 @@
 		"mozilla*/testing/gtest/gtest",
 		"mozilla*/other-licenses"
 	],
+	"index_files": false,
+	"rulers": [80]
 }
