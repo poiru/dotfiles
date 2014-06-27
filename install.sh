@@ -15,19 +15,28 @@ function make_link() {
         mkdir -p "$target_dir"
     fi
 
-    # Ensure that the target is either a symlink or does not exist at all.
-    if [ -e "$target" ] && [ ! -L "$target" ]; then
+    if [ -L "$target" ]; then
+        unlink "$target"
+    fi
+
+    if [ -d "$target" ]; then
+        read -r -p "Directory '$target' already exists. Overwrite [y/n]? " yn
+        if [[ ! $yn =~ ^[Yy]$ ]]; then
+            return
+        fi
+
+        rm -rf "$target"
+    elif [ -e "$target" ]; then
         read -r -p "Non-symlink '$target' already exists. Overwrite [y/n]? " yn
         if [[ ! $yn =~ ^[Yy]$ ]]; then
             return
         fi
+
+        rm "$target"
     fi
 
     echo "Creating symlink $target"
-    if [ -L "$target" ]; then
-        unlink "$target"
-    fi
-    ln -fs "$source" "$target"
+    ln -s "$source" "$target"
 }
 
 function link_common() {
