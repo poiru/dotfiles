@@ -6,7 +6,7 @@
     "ensure_newline_at_eof_on_save": true,
     "find_selected_text": true,
     "index_files": false,
-    "open_files_in_new_window": true,
+    "open_files_in_new_window": false,
     "rulers": [80],
     "shift_tab_unindent": true,
     "show_full_path": true,
