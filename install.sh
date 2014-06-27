@@ -61,8 +61,7 @@ function link_local() {
         make_link ".xscreensaver"
         make_link ".xsessionrc"
     elif [[ "$OSTYPE" == "darwin"* ]]; then
-        make_link "sublime-text/Preferences.sublime-settings" "Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-        make_link "sublime-text/JavaScript.sublime-settings" "Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings"
+        make_link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages/User"
     fi
 }
 
