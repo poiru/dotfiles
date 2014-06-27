@@ -13,15 +13,29 @@ qnew = -U
 
 [extensions]
 color =
+extdiff =
 mq =
 pager =
 purge =
 rebase =
 
+[ui]
+merge = bcomp
+
 [diff]
 git = 1
 showfunc = 1
 unified = 8
+
+[extdiff]
+cmd.bcomp = /usr/local/bin/bcomp
+
+[merge-tools]
+bcomp.executable = /usr/local/bin/bcomp
+bcomp.args = $local $other $base $output
+bcomp.priority = 1
+bcomp.premerge = True
+bcomp.gui = True
 
 [pager]
 pager = less -FSRX
