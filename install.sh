@@ -45,6 +45,7 @@ function link_common() {
     make_link ".gitconfig"
     make_link ".hgrc"
     make_link ".inputrc"
+    make_link ".tmux.conf"
     make_link ".vim"
     make_link ".vimrc"
 
