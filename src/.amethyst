@@ -1,8 +1,0 @@
-{
-    "enables-layout-hud-on-space-change": false,
-    "floating": [
-        "com.apple.systempreferences",
-        "org.keepassx.keepassx",
-    ],
-}
-
