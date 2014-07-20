@@ -1,0 +1,1 @@
+external/vim-rust/syntax/rust.vim
