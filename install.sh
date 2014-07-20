@@ -43,6 +43,7 @@ function link_common() {
     make_link ".bash_profile"
     make_link ".bashrc"
     make_link ".gitconfig"
+    make_link ".gitignore"
     make_link ".hgrc"
     make_link ".inputrc"
     make_link ".tmux.conf"

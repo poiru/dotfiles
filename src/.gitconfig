@@ -18,5 +18,8 @@
 [color]
 	ui = true
 
+[core]
+	excludesfile = ~/.gitignore
+
 [push]
 	default = current
