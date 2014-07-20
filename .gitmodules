@@ -4,3 +4,6 @@
 [submodule "external/vim-rust"]
 	path = external/vim-rust
 	url = https://github.com/wting/rust.vim
+[submodule "external/vim-fugitive"]
+	path = external/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
