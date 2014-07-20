@@ -1,9 +1,12 @@
-syntax on
+"
+" General
+"
+
+set nocompatible
+
 scriptencoding utf-8
+set encoding=utf-8
 
-filetype plugin indent on
-
-set virtualedit=onemore
 set history=200
 
 " Disable backups and swapfiles.
@@ -11,12 +14,24 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Solarized theme.
+"
+" Formatting
+"
+
+set autoindent
+
+"
+" Visual
+"
+
+syntax on
+
 set term=xterm-256color
 set background=dark
 let g:solarized_menu=0
 colorscheme solarized
 
+" Disable cursor blinking entirely.
 set guicursor+=a:blinkon0
 
 " Show line numbers and highlight current line.
@@ -33,12 +48,20 @@ set hlsearch
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
-set whichwrap+=<,>,h,l,[,]
-set autoindent
-
 set pastetoggle=<F1>
 
+" Allow left/right keys to wrap to previous/next line.
+set whichwrap+=<,>,h,l,[,]
+
+set virtualedit=block,onemore
+
+"
+" Autocommands
+"
+
 au BufRead,BufNewFile *.cpp,*.h set et ts=2 sw=2
-au BufRead,BufNewFile *.jsm set filetype=javascript
+au BufRead,BufNewFile *.jsm set ft=javascript
 au BufRead,BufNewFile *.pl set et ts=4 sw=4
-au BufRead,BufNewFile *.rs,*.rc set filetype=rust et ts=4 sw=4
+au BufRead,BufNewFile *.rs,*.rc set ft=rust et ts=4 sw=4
+
+filetype plugin indent on
