@@ -13,6 +13,8 @@
 	p = pull -r
 	plu = pull upstream master
 	pso = push origin master
+	ri = rebase -i
+	rc = rebase --continue
 	s = status -s --ignore-submodules
 
 [color]
