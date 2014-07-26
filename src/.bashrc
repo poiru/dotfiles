@@ -79,6 +79,9 @@ if ! shopt -oq posix; then
         i=/etc/bash_completion.d/$i
         [[ -f $i && -r $i ]] && . "$i"
     done
+
+    # Enable auto-completion for the 'g' alias.
+    type __git_complete >/dev/null && __git_complete g __git_main
 fi
 
 # Enable color support for `ls` and others.
