@@ -68,6 +68,9 @@ defaults write com.apple.dock autohide-time-modifier -float 0.4
 # Make Dock icons of hidden applications translucent.
 defaults write com.apple.dock showhidden -bool true
 
+# Disable XCode indexing.
+defaults write com.apple.dt.XCode IDEIndexDisable 1
+
 # Kill affected apps.
 for app in "Dock" "Finder"; do
     killall "${app}" > /dev/null 2>&1
