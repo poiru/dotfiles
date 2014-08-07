@@ -8,5 +8,6 @@ set show-mode-in-prompt on
 "\C-j": menu-complete
 "\C-k": menu-complete-backward
 "\ea": beginning-of-line
+"\ed": shell-backward-kill-word
 "\ee": end-of-line
 "\e.": insert-last-argument
