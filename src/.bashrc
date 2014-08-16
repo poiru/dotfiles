@@ -100,14 +100,35 @@ if ! shopt -oq posix; then
              /etc/bash_completion \
              /usr/local/share/bash-completion/bash_completion
 
-    # Explicitly load the useful completion scripts.
-    for i in git mercurial; do
-        i=/etc/bash_completion.d/$i
-        [[ -f $i && -r $i ]] && . "$i"
-    done
+    # Use a custom dynamic completion loader to make auto-completion work
+    # when using aliases.
+    function _custom_completion_loader() {
+        local cmd=$1
+        case $cmd in
+            g|git)
+                if [[ "$OSTYPE" == "darwin"* ]]; then
+                    . /usr/local/etc/bash_completion.d/git-completion.bash
+                else
+                    _completion_loader git
+                fi
+                type __git_complete >/dev/null && __git_complete g __git_main
+                ;;
+            h|hg)
+                sourceif /etc/bash_completion.d/mercurial \
+                         /usr/local/etc/bash_completion.d/hg-completion.bash
+                complete -o bashdefault -o default -o nospace -F _hg h
+                ;;
+            *)
+                _completion_loader $cmd
+                ;;
+        esac
 
-    # Enable auto-completion for the 'g' alias.
-    type __git_complete >/dev/null && __git_complete g __git_main
+        return 124
+    }
+
+    if type _completion_loader >/dev/null; then
+        complete -D -F _custom_completion_loader
+    fi
 fi
 
 # Enable color support for `ls` and others.
