@@ -129,6 +129,8 @@ if ! shopt -oq posix; then
     if type _completion_loader >/dev/null; then
         complete -D -F _custom_completion_loader
     fi
+
+    complete -F _cd -o nospace c
 fi
 
 # Enable color support for `ls` and others.
