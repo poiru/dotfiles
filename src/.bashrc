@@ -76,6 +76,17 @@ function md() {
     [ -n "$1" ] && mkdir -p "$1" && cd "$1";
 }
 
+function sourceif() {
+    for f in $@; do
+        if [ -f "$f" ]; then
+            . "$f"
+            return;
+        fi
+    done
+
+    echo "sourceif: Not found: '$@'"
+}
+
 # Enable auto-completion.
 if ! shopt -oq posix; then
     # To speed up bash initialization, this is set to a non-existent directory
@@ -85,13 +96,9 @@ if ! shopt -oq posix; then
         BASH_COMPLETION_COMPAT_DIR="/none"
     fi
 
-    if [ -f /usr/share/bash-completion/bash_completion ]; then
-        . /usr/share/bash-completion/bash_completion
-    elif [ -f /etc/bash_completion ]; then
-        . /etc/bash_completion
-    elif [ -f /usr/local/share/bash-completion/bash_completion ]; then
-        . /usr/local/share/bash-completion/bash_completion
-    fi
+    sourceif /usr/share/bash-completion/bash_completion \
+             /etc/bash_completion \
+             /usr/local/share/bash-completion/bash_completion
 
     # Explicitly load the useful completion scripts.
     for i in git mercurial; do
