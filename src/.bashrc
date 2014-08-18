@@ -52,6 +52,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias cb='pbcopy'
 fi
 
+alias C='set -f -B; _calc '
+function _calc() {
+    echo "scale=5; $@" | tr -d ', \042-\047' | bc -l;
+    set +f;
+}
+
 # Helpful functions.
 function extract() {
     case $1 in
