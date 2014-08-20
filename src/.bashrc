@@ -39,6 +39,7 @@ alias adu='sudo apt-get update &&
 alias c=cd
 alias g=git
 alias h=hg
+alias m='MOZ_QUIET=1 ./mach'
 alias sr='screen -rD'
 alias sk='ssh -t k screen -D -RR'
 alias v=vim
