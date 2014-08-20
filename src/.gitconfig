@@ -3,6 +3,7 @@
 	email = birunthan@mohanathas.com
 
 [alias]
+	a = add
 	br = branch
 	c = commit
 	ca = commit --amend --no-edit
