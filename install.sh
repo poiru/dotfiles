@@ -60,6 +60,7 @@ function link_local() {
         make_link ".xsessionrc"
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         make_link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages/User"
+        make_link "karabiner/private.xml" "Library/Application Support/Karabiner/private.xml"
     fi
 }
 

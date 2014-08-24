@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Swap Command_L and Control_L</name>
+    <appendix>(Except in VIRTUALMACHINE, TERMINAL, X11)</appendix>
+    <identifier>private.swap_command_control</identifier>
+    <not>VIRTUALMACHINE, TERMINAL, X11</not>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>
+  </item>
+  <item>
+    <name>F19 to Shift+Option_R (or Escape)</name>
+    <identifier>private.f19_to_shift_optionr</identifier>
+    <autogen>__KeyOverlaidModifier__ KeyCode::F19, KeyCode::OPTION_R, ModifierFlag::SHIFT_R, KeyCode::ESCAPE</autogen>
+  </item>
+  <item>
+    <name>Disable Shift+Command_Q</name>
+    <identifier>private.disable_shift_commandq</identifier>
+    <autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::VK_NONE</autogen> 
+  </item>
+  <item>
+    <name>Å to Backspace</name>
+    <identifier>private.å_to_backspace</identifier>
+    <autogen>__KeyToKey__ KeyCode::GERMAN_U_UMLAUT, ModifierFlag::NONE, KeyCode::DELETE</autogen> 
+  </item>
+</root>
