@@ -29,6 +29,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Finder: Show hidden files by default.
 defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write -g AppleShowAllFiles -bool true
 
 # Finder: Show all filename extensions.
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
