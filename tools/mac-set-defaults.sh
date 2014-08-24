@@ -6,6 +6,9 @@ sudo -v
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
 
+# Make key repeating work.
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Disable smart quotes and dashes as they’re annoying when typing code.
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
