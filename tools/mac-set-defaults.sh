@@ -6,6 +6,10 @@ sudo -v
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
 
+# Show remaining battery time; hide percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowTime -string "YES"
+
 # Make key repeating work.
 defaults write -g ApplePressAndHoldEnabled -bool false
 
