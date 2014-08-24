@@ -28,8 +28,7 @@ syntax on
 
 set term=xterm-256color
 set background=dark
-let g:solarized_menu=0
-colorscheme solarized
+colorscheme base16-tomorrow
 
 " Disable cursor blinking entirely.
 set guicursor+=a:blinkon0
