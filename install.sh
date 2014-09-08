@@ -54,6 +54,7 @@ function link_common() {
 function link_local() {
     if [[ "$OSTYPE" == "linux-gnu" ]]; then
         make_link ".fonts.conf" ".config/fontconfig/fonts.conf"
+        make_link "sublime-text/User" ".config/sublime-text-3/Packages/User"
         make_link ".xfce-terminalrc" ".config/Terminal/terminalrc"
         make_link ".xmodmaprc"
         make_link ".xscreensaver"
