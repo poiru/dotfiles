@@ -79,6 +79,11 @@ function extract() {
     esac
 }
 
+function function_exists() {
+    declare -f -F $1 > /dev/null
+    return $?
+}
+
 function md() {
     [ -n "$1" ] && mkdir -p "$1" && cd "$1";
 }
@@ -115,10 +120,17 @@ if ! shopt -oq posix; then
             g|git)
                 if [[ "$OSTYPE" == "darwin"* ]]; then
                     . /usr/local/etc/bash_completion.d/git-completion.bash
+                elif [ -f "/etc/bash_completion.d/git" ]; then
+                    . /etc/bash_completion.d/git
                 else
                     _completion_loader git
                 fi
-                type __git_complete >/dev/null && __git_complete g __git_main
+
+                if function_exists "__git_complete"; then
+                    __git_complete g __git_main
+                else
+                    complete -o bashdefault -o default -o nospace -F _git g
+                fi
                 ;;
             h|hg)
                 sourceif /etc/bash_completion.d/mercurial \
