@@ -72,11 +72,10 @@ abstracts = {
   # text to insert at the beginning of each non-message line
   # %G = brightgreen (Solarized: base01, i.e. darkest gray)
   # %| probably right-aligns
-  line_start = " %G-!- ";
+  line_start = " %G-!- %K";
 
   # timestamp styling, nothing by default
-  # %Y = brightyellow (Solarized: base00, i.e. 2nd darkest gray)
-  timestamp = "%Y$*%n";
+  timestamp = "%K$*%n";
 
   # any kind of text that needs hilighting, default is to bold
   hilight = "%_$*%_";
@@ -374,8 +373,8 @@ formats = {
     pubmsg_me_channel = "{pubmsgmenick $3 {menick $[-8]0}{msgchannel $1}}$2";
     pubmsg_hilight = "{pubmsghinick $0 $3 $[-8]1%n}$2";
     pubmsg_hilight_channel = "{pubmsghinick $0 $4 $[-8]1{msgchannel $2}}$3";
-    pubmsg = "{pubmsgnick $2 {pubnick %Y$[-8]0}}$1";
-    pubmsg_channel = "{pubmsgnick $2 {pubnick %Y$[-8]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick $[-8]0}}$1";
+    pubmsg_channel = "{pubmsgnick $2 {pubnick $[-8]0}}$1";
     msg_private_query = "{privmsgnick $[-8]0}$2";
     join = "{channick $0} has joined";
     quit = "{channick $0} has quit";
