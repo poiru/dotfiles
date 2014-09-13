@@ -1,14 +1,6 @@
 <?xml version="1.0"?>
 <root>
   <item>
-    <name>Swap Command_L and Control_L</name>
-    <appendix>(Except in VIRTUALMACHINE, TERMINAL, X11)</appendix>
-    <identifier>private.swap_command_control</identifier>
-    <not>VIRTUALMACHINE, TERMINAL, X11</not>
-    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>
-  </item>
-  <item>
     <name>F19 to Shift+Option_R (or Escape)</name>
     <identifier>private.f19_to_shift_optionr</identifier>
     <autogen>__KeyOverlaidModifier__ KeyCode::F19, KeyCode::OPTION_R, ModifierFlag::SHIFT_R, KeyCode::ESCAPE</autogen>
