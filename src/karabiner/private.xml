@@ -14,9 +14,14 @@
     <autogen>__KeyOverlaidModifier__ KeyCode::F19, KeyCode::OPTION_R, ModifierFlag::SHIFT_R, KeyCode::ESCAPE</autogen>
   </item>
   <item>
-    <name>Disable Shift+Command_Q</name>
+    <name>Disable Shift+Command+Q</name>
     <identifier>private.disable_shift_commandq</identifier>
     <autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::VK_NONE</autogen> 
+  </item>
+  <item>
+    <name>Disable Control+Command+F</name>
+    <identifier>private.disable_control_command_f</identifier>
+    <autogen>__KeyToKey__ KeyCode::F, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
   </item>
   <item>
     <name>Å to Backspace</name>
