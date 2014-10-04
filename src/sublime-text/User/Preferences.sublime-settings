@@ -13,7 +13,7 @@
 		"CVS",
 		"mozilla*/build/stlport",
 		"mozilla*/db/sqlite3/src",
-		"mozilla*/ipc/chromium/src/third_party",
+		"mozilla*/ipc/chromium/",
 		"mozilla*/obj-*",
 		"mozilla*/addon-sdk",
 		"mozilla*/gfx/angle",
@@ -27,13 +27,14 @@
 		"mozilla*/js/src/octane/",
 		"mozilla*/media/kiss_ftt/",
 		"mozilla*/media/lib*/",
-		"mozilla*/media/lib*/",
+		"mozilla*/media/webrtc/trunk",
 		"mozilla*/modules/freetype2",
 		"mozilla*/modules/libbz2",
 		"mozilla*/modules/libmar",
 		"mozilla*/modules/zlib",
 		"mozilla*/testing/gtest/gmock",
 		"mozilla*/testing/gtest/gtest",
+		"mozilla*/security/sandbox/chromium/",
 		"mozilla*/other-licenses"
 	],
 	"highlight_line": true,
@@ -47,5 +48,5 @@
 	"show_full_path": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"update_check": false,
+	"update_check": false
 }
