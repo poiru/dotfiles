@@ -49,8 +49,10 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias cb='xclip -selection c'
+alias o=xdg-open
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias cb='pbcopy'
+    alias o=open
 fi
 
 alias C='set -f -B; _calc '
