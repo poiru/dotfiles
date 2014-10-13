@@ -6,6 +6,13 @@ sudo -v
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
 
+# Disable Spotlight and hide the menu bar icon.
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+sudo sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+
+# Disable Notification Center.
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+
 # Show remaining battery time; hide percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
@@ -80,6 +87,6 @@ defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dt.XCode IDEIndexDisable 1
 
 # Kill affected apps.
-for app in "Dock" "Finder"; do
+for app in "Dock" "Finder" "SystemUIServer"; do
     killall "${app}" > /dev/null 2>&1
 done
