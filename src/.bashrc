@@ -48,9 +48,11 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias cb='xclip -selection c'
+alias ls='ls --color=auto'
 alias o=xdg-open
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias cb='pbcopy'
+    alias ls='ls -G'
     alias o=open
 fi
 
@@ -151,12 +153,4 @@ if ! shopt -oq posix; then
     fi
 
     complete -F _cd -o nospace c
-fi
-
-# Enable color support for `ls` and others.
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias grep='grep --color=auto'
 fi
