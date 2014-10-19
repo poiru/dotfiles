@@ -1,14 +1,4 @@
 set completion-ignore-case on
-set editing-mode vi
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set mark-symlinked-directories on
-set show-mode-in-prompt on
-
-"\C-l": clear-screen
-"\C-j": menu-complete
-"\C-k": menu-complete-backward
-"\ea": beginning-of-line
-"\ed": shell-backward-kill-word
-"\ee": end-of-line
-"\e.": insert-last-argument

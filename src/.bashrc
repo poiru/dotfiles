@@ -5,7 +5,6 @@ case "$TERM" in
     *) ;;
 esac
 
-set -o vi
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
