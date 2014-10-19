@@ -2,3 +2,4 @@ set completion-ignore-case on
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set mark-symlinked-directories on
+set bell-style off
