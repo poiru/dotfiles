@@ -154,3 +154,6 @@ if ! shopt -oq posix; then
 
     complete -F _cd -o nospace c
 fi
+
+# Make auto-completion work for names with colons.
+COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
