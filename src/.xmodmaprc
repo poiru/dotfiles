@@ -1,22 +1,59 @@
+! See http://www.cl.cam.ac.uk/~mgk25/ucs/keysyms.txt for mapping between
+! X11 keysyms and Unicode.
+
 ! Map Caps_Lock to AltGr.
 remove Lock = Caps_Lock
 keysym Caps_Lock = ISO_Level3_Shift
 add Lock = Caps_Lock
 
-! Map the first row (QWERTY...) keys so that AltGr+"Key" is equal to
-! Shift+"Key on top left". For example, AltGr+Q is mapped to "!".
-keycode 24 = q Q q Q exclam NoSymbol exclam
-keycode 25 = w W w W quotedbl NoSymbol quotedbl
-keycode 28 = t T t T percent NoSymbol percent
-keycode 29 = y Y y Y ampersand NoSymbol ampersand
-keycode 30 = u U u U slash NoSymbol slash
-keycode 31 = i I i I parenleft NoSymbol parenleft
-keycode 32 = o O o O parenright NoSymbol parenright
-keycode 33 = p P p P equal NoSymbol equal
+keycode 10 = 1
+keycode 11 = 2
+keycode 12 = 3 NoSymbol NoSymbol NoSymbol asciicircum
+keycode 13 = 4 NoSymbol NoSymbol NoSymbol EuroSign
+keycode 14 = 5
+keycode 15 = 6
+keycode 16 = 7
+keycode 17 = 8
+keycode 18 = 9
+keycode 19 = 0
+keycode 20 = plus
+keycode 21 = grave acute
 
-! Map the "Å" key to Shift.
-keycode 34 = Shift_L
-add Shift = Shift_L
+keycode 24 = q Q NoSymbol NoSymbol plus
+keycode 25 = w W NoSymbol NoSymbol semicolon
+keycode 26 = e E NoSymbol NoSymbol question
+keycode 27 = r R NoSymbol NoSymbol bar
+keycode 28 = t T NoSymbol NoSymbol less
+keycode 29 = y Y NoSymbol NoSymbol asciitilde
+keycode 30 = u U NoSymbol NoSymbol backslash
+keycode 31 = i I NoSymbol NoSymbol braceleft
+keycode 32 = o O NoSymbol NoSymbol bracketleft
+keycode 33 = p P NoSymbol NoSymbol underscore
+keycode 34 = BackSpace BackSpace BackSpace BackSpace
+keycode 35 = Shift_L NoSymbol Shift_L
 
-! Map the "§" key to Escape.
+keycode 38 = a A NoSymbol NoSymbol quotedbl rightarrow
+keycode 39 = s S NoSymbol NoSymbol apostrophe
+keycode 40 = d D NoSymbol NoSymbol exclam
+keycode 41 = f F NoSymbol NoSymbol equal
+keycode 42 = g G NoSymbol NoSymbol greater
+keycode 43 = h H NoSymbol NoSymbol slash
+keycode 44 = j J NoSymbol NoSymbol parenright
+keycode 45 = k K NoSymbol NoSymbol braceright
+keycode 46 = l L NoSymbol NoSymbol bracketright
+keycode 47 = odiaeresis Odiaeresis NoSymbol NoSymbol colon
+keycode 48 = adiaeresis Adiaeresis
 keycode 49 = Escape NoSymbol Escape
+
+keycode 52 = z Z
+keycode 53 = x X
+keycode 54 = c C NoSymbol NoSymbol percent
+keycode 55 = v V NoSymbol NoSymbol NoSymbol ampersand
+keycode 56 = b B NoSymbol NoSymbol dollar enfilledcircbullet
+keycode 57 = n N NoSymbol NoSymbol asterisk endash
+keycode 58 = m M NoSymbol NoSymbol parenleft emdash
+keycode 59 = comma semicolon NoSymbol NoSymbol numbersign
+keycode 60 = period colon NoSymbol NoSymbol ellipsis
+
+! Get rid of the annoying non-breaking space with AltGr+Space.
+keycode 65 = space space space space space space space
