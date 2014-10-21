@@ -121,8 +121,7 @@ if ! shopt -oq posix; then
              /etc/bash_completion \
              /usr/local/share/bash-completion/bash_completion
 
-    # Use a custom dynamic completion loader to make auto-completion work
-    # when using aliases.
+    # Make auto-completion work with some aliases.
     function _custom_completion_loader() {
         local cmd=$1
         case $cmd in
@@ -154,7 +153,7 @@ if ! shopt -oq posix; then
         return 124
     }
 
-    if type _completion_loader >/dev/null; then
+    if function_exists "_completion_loader"; then
         complete -D -F _custom_completion_loader
     fi
 
