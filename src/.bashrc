@@ -1,3 +1,8 @@
+# Bail out if this is a non-interactive shell.
+if [ -z "$PS1" ]; then
+   return
+fi
+
 # If this is an xterm set the title to user@host:dir.
 case "$TERM" in
     xterm*) PS1="\[\e]0;\u@\h: \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
