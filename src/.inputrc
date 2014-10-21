@@ -9,3 +9,8 @@ set mark-symlinked-directories on
 
 "\C-b": shell-backward-word
 "\C-f": shell-forward-word
+"\ea": yank-nth-arg
+"\es": yank-last-arg
+
+"\el": "\C-e | less\C-m"
+"\et": " 2>&1 | tee -a "
