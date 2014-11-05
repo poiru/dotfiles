@@ -30,7 +30,7 @@ bind -m vi-command '"\e[A": "\201\203"'
 bind -m vi-command '"\e[B": "\202\203"'
 
 export EDITOR=vim
-export LESS=n
+export LESS=nR
 
 export PATH=$PATH:~/local/bin
 if [[ "$OSTYPE" == "darwin"* ]]; then
