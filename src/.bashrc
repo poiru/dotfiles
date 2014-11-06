@@ -60,7 +60,7 @@ alias ls='ls --color=auto'
 alias o=xdg-open
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias cb='pbcopy'
-    alias ls='ls -G'
+    alias ls='gls --color=auto'
     alias o=open
 fi
 
