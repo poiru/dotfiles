@@ -72,25 +72,6 @@ function _calc() {
 }
 
 # Helpful functions.
-function extract() {
-    case $1 in
-        *.tar)     tar xvf $1;;
-        *.tar.bz2) tar xvjf $1;;
-        *.tbz2)    tar xvjf $1;;
-        *.tar.gz)  tar xvzf $1;;
-        *.tgz)     tar xvzf $1;;
-        *.tar.xz)  tar xvJf $1;;
-        *.lzma)    unlzma $1;;
-        *.bz2)     bunzip2 $1;;
-        *.rar)     unrar x -ad $1;;
-        *.gz)      gunzip $1;;
-        *.zip)     unzip $1;;
-        *.7z)      7z x $1;;
-        *.xz)      unxz $1;;
-        *)         echo "extract: Invalid file: '$1'";;
-    esac
-}
-
 function function_exists() {
     declare -f -F $1 > /dev/null
     return $?
