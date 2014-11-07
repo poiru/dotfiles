@@ -21,14 +21,6 @@ HISTFILESIZE=2000
 # Disable flow control (CTRL+S/CTRL+Q).
 stty -ixon
 
-# When in command mode, keep the cursor at the end of the line when using the
-# up/down arrows.
-bind -m vi-command '"\201": previous-history'
-bind -m vi-command '"\202": next-history'
-bind -m vi-command '"\203": end-of-line'
-bind -m vi-command '"\e[A": "\201\203"'
-bind -m vi-command '"\e[B": "\202\203"'
-
 export EDITOR=vim
 export LESS=FnR
 
