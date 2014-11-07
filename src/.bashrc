@@ -47,6 +47,7 @@ alias c=cd
 alias g=git
 alias h=hg
 alias m='MOZ_QUIET=1 ./mach'
+alias man="LESS_TERMCAP_md=$'\E[34m' man"
 alias s=subl
 alias sr='screen -rD'
 alias sk='ssh -t k screen -D -RR; clear'
