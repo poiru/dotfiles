@@ -6,6 +6,7 @@
 	a = add
 	br = branch
 	c = commit
+	cm = commit -m
 	ca = commit --amend --no-edit
 	cae = commit --amend
 	co = checkout
