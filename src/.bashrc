@@ -3,6 +3,19 @@ if [ -z "$PS1" ]; then
    return
 fi
 
+shopt -s checkwinsize
+shopt -s histappend
+shopt -s globstar
+
+export EDITOR=vim
+export LESS=FnR
+export LS_COLORS='rs=0:di=34:ln=35:mh=00:pi=33:so=35:do=35:bd=33;04:cd=33;04:or=35;04:su=32;04:sg=32;04:ca=30;41:tw=36;04:ow=34;04:st=36:ex=31:'
+
+export PATH=$PATH:~/local/bin
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH=/usr/local/bin:$PATH
+fi
+
 # If this is an xterm set the title to user@host:dir.
 case "$TERM" in
     xterm*) PS1="\[\e]0;\u@\h: \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
@@ -10,26 +23,12 @@ case "$TERM" in
     *) ;;
 esac
 
-shopt -s histappend
-shopt -s checkwinsize
-shopt -s globstar
-
 HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=1000
 HISTFILESIZE=2000
 
 # Disable flow control (CTRL+S/CTRL+Q).
 stty -ixon
-
-export EDITOR=vim
-export LESS=FnR
-
-export LS_COLORS='rs=0:di=34:ln=35:mh=00:pi=33:so=35:do=35:bd=33;04:cd=33;04:or=35;04:su=32;04:sg=32;04:ca=30;41:tw=36;04:ow=34;04:st=36:ex=31:'
-
-export PATH=$PATH:~/local/bin
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH=/usr/local/bin:$PATH
-fi
 
 # Alias definitions.
 alias adu='sudo apt-get update &&
