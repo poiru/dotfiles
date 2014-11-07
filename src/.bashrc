@@ -30,7 +30,7 @@ bind -m vi-command '"\e[A": "\201\203"'
 bind -m vi-command '"\e[B": "\202\203"'
 
 export EDITOR=vim
-export LESS=nR
+export LESS=FnR
 
 export LS_COLORS='rs=0:di=34:ln=35:mh=00:pi=33:so=35:do=35:bd=33;04:cd=33;04:or=35;04:su=32;04:sg=32;04:ca=30;41:tw=36;04:ow=34;04:st=36:ex=31:'
 
