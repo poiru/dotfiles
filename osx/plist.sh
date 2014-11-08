@@ -4,6 +4,7 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 plists=(
     "com.divisiblebyzero.Spectacle.plist"
+    "com.googlecode.iterm2.plist"
     "com.ragingmenace.MenuMeters.plist"
     "org.pqrs.Karabiner.plist"
     "org.pqrs.Seil.plist"
