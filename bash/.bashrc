@@ -18,8 +18,12 @@ fi
 
 # Change prompt to "[user: dir]$".
 case "$TERM" in
-    xterm*) PS1="\[\e]0;\u@\h: \w\a\][\u: \W]\$ ";;
-    screen) PS1="\[\e]0;\u@\h: \w\a\][\u: \W](s)\$ ";;
+    screen|xterm*)
+        if [ -n "$SSH_CLIENT" ]; then
+            PS1_HOST="@\h"
+        fi
+        PS1="\[\e]0;\u@\h: \w\a\][\u$PS1_HOST: \W]\$ "
+        ;;
 esac
 
 HISTCONTROL=ignoreboth:erasedups
