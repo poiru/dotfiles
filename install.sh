@@ -1,8 +1,11 @@
 #!/bin/bash
 
 function make_link() {
-    local source="$PWD/src/$1"
-    local target=$([ $# == 2 ] && echo "$HOME/$2" || echo "$HOME/$1")
+    local source="$PWD/$1"
+    local target="$HOME/$2"
+    if [ -z "$2" ]; then
+        target="$HOME/$(basename $1)"
+    fi
 
     # Ensure that target directory exists.
     local target_dir="${target%/*}"
@@ -40,25 +43,25 @@ function make_link() {
 }
 
 function link_common() {
-    make_link ".bash_profile"
-    make_link ".bashrc"
-    make_link ".gitconfig"
-    make_link ".gitignore"
-    make_link ".hgrc"
-    make_link ".inputrc"
-    make_link ".tmux.conf"
-    make_link ".vim"
-    make_link ".vimrc"
+    make_link "bash/.bash_profile"
+    make_link "bash/.bashrc"
+    make_link "bash/.inputrc"
+    make_link "git/.gitconfig"
+    make_link "git/.gitignore"
+    make_link "hg/.hgrc"
+    make_link "tmux/.tmux.conf"
+    make_link "vim" ".vim"
+    make_link "vim/.vimrc"
 }
 
 function link_local() {
     if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        make_link ".fonts.conf" ".config/fontconfig/fonts.conf"
+        make_link "fontconfig/fonts.conf" ".config/fontconfig/fonts.conf"
         make_link "sublime-text/User" ".config/sublime-text-3/Packages/User"
-        make_link ".xfce-terminalrc" ".config/xfce4/terminal/terminalrc"
-        make_link ".xmodmaprc"
-        make_link ".xscreensaver"
-        make_link ".xsessionrc"
+        make_link "xfce/terminalrc" ".config/xfce4/terminal/terminalrc"
+        make_link "x/.xmodmaprc"
+        make_link "x/.xscreensaver"
+        make_link "x/.xsessionrc"
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         make_link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages/User"
         make_link "karabiner/private.xml" "Library/Application Support/Karabiner/private.xml"
@@ -66,8 +69,8 @@ function link_local() {
 }
 
 function link_remote() {
-    make_link ".irssi/solarized.theme"
-    make_link ".screenrc"
+    make_link "irssi/solarized.theme"
+    make_link "screen/.screenrc"
 }
 
 while getopts clr opt; do
