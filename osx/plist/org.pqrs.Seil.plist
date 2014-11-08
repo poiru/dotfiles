@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MigrationUtilitiesCurrentBundleIdentifer</key>
+	<string>org.pqrs.Seil</string>
+	<key>NSWindow Frame SUUpdateAlertFrame</key>
+	<string>672 590 575 392 0 0 1920 1178 </string>
+	<key>SUFeedURL</key>
+	<string>https://pqrs.org/osx/karabiner/files/seil-appcast.xml</string>
+	<key>SULastCheckTime</key>
+	<date>2014-11-08T05:29:38Z</date>
+	<key>SUSkippedVersion</key>
+	<string>10.11.0</string>
+	<key>isCheckUpdate</key>
+	<integer>0</integer>
+	<key>sysctl</key>
+	<dict>
+		<key>enable_capslock</key>
+		<integer>1</integer>
+		<key>enable_command_l</key>
+		<integer>1</integer>
+		<key>enable_control_l</key>
+		<integer>1</integer>
+		<key>keycode_capslock</key>
+		<integer>80</integer>
+		<key>keycode_command_l</key>
+		<integer>59</integer>
+		<key>keycode_control_l</key>
+		<integer>55</integer>
+		<key>keycode_option_l</key>
+		<integer>55</integer>
+	</dict>
+</dict>
+</plist>

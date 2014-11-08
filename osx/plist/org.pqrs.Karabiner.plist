@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MigrationUtilitiesCurrentBundleIdentifer</key>
+	<string>org.pqrs.Karabiner</string>
+	<key>NSWindow Frame SUUpdateAlertFrame</key>
+	<string>672 590 575 392 0 0 1920 1178 </string>
+	<key>SUFeedURL</key>
+	<string>https://pqrs.org/osx/karabiner/files/appcast.xml</string>
+	<key>SULastCheckTime</key>
+	<date>2014-10-19T05:18:38Z</date>
+	<key>SUSkippedVersion</key>
+	<string>10.3.0</string>
+	<key>configList</key>
+	<array>
+		<dict>
+			<key>identify</key>
+			<string>config_1403197715_220179</string>
+			<key>name</key>
+			<string>Default</string>
+		</dict>
+	</array>
+	<key>config_1403197715_220179</key>
+	<dict>
+		<key>notsave.automatically_enable_keyboard_device</key>
+		<integer>1</integer>
+		<key>notsave.automatically_enable_pointing_device</key>
+		<integer>1</integer>
+		<key>parameter.keyoverlaidmodifier_timeout</key>
+		<integer>120</integer>
+		<key>private.disable_control_command_f</key>
+		<integer>1</integer>
+		<key>private.disable_shift_commandq</key>
+		<integer>1</integer>
+		<key>private.f19_to_shift_optionr</key>
+		<integer>1</integer>
+		<key>private.swap_commandl_leftright_optionl_leftright</key>
+		<integer>1</integer>
+		<key>private.swea_to_backspace</key>
+		<integer>1</integer>
+		<key>private.terminal_control_click_to_command_click</key>
+		<integer>1</integer>
+		<key>private.terminal_swap_commandl_controll</key>
+		<integer>1</integer>
+		<key>private.å_to_backspace</key>
+		<integer>1</integer>
+		<key>remap.app_firefox_commandA2controlAzzz</key>
+		<integer>1</integer>
+		<key>remap.commandDelete2optionLdelete</key>
+		<integer>1</integer>
+		<key>remap.ejecttopower</key>
+		<integer>1</integer>
+		<key>remap.optionR_arrow2PgUpDnHomeEnd</key>
+		<integer>1</integer>
+		<key>remap.private.disablecommandq</key>
+		<integer>1</integer>
+		<key>remap.private.f192f19_escape</key>
+		<integer>1</integer>
+		<key>remap.private.swapcommandandcontrol</key>
+		<integer>1</integer>
+		<key>remap.swap_commandtabcontroltab</key>
+		<integer>1</integer>
+		<key>remap.swapcommandandcontrol</key>
+		<integer>1</integer>
+		<key>remap.termcommand2control</key>
+		<integer>1</integer>
+		<key>repeat.wait</key>
+		<integer>43</integer>
+	</dict>
+	<key>isCheckUpdate</key>
+	<integer>0</integer>
+	<key>isQuitByHand</key>
+	<false/>
+	<key>isStatusWindowEnabled</key>
+	<false/>
+	<key>isStatusWindowShowPointingButtonLock</key>
+	<false/>
+	<key>isStatusbarEnable</key>
+	<false/>
+</dict>
+</plist>
