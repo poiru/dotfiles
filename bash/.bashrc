@@ -16,11 +16,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/usr/local/bin:$PATH
 fi
 
-# If this is an xterm set the title to user@host:dir.
+# Change prompt to "[user: dir]$".
 case "$TERM" in
-    xterm*) PS1="\[\e]0;\u@\h: \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
-    screen) PS1="\[\e]0;\u@\h (screen): \w\a\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]: \W]\$ ";;
-    *) ;;
+    xterm*) PS1="\[\e]0;\u@\h: \w\a\][\u: \W]\$ ";;
+    screen) PS1="\[\e]0;\u@\h: \w\a\][\u: \W](s)\$ ";;
 esac
 
 HISTCONTROL=ignoreboth:erasedups
