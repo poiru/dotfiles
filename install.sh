@@ -2,6 +2,8 @@
 
 set -e
 
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 function usage() {
     cat <<EOF
 install.sh [options]
@@ -14,7 +16,7 @@ EOF
 }
 
 function make_link() {
-    local source="$PWD/$1"
+    local source="$script_dir/$1"
     local target="$HOME/$2"
     if [ -z "$2" ]; then
         target="$HOME/$(basename $1)"
