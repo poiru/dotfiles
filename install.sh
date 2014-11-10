@@ -8,7 +8,6 @@ install.sh [options]
 
     -c            link common files such as .gitconfig and .vimrc
     -l            link local files such as .xmodmaprc and terminalrc
-    -r            link local files such as .screenrc
     -h, --help    this help
 
 EOF
@@ -63,9 +62,14 @@ function link_common() {
     make_link "git/.gitconfig"
     make_link "git/.gitignore"
     make_link "hg/.hgrc"
+    make_link "screen/.screenrc"
     make_link "tmux/.tmux.conf"
     make_link "vim" ".vim"
     make_link "vim/.vimrc"
+
+    if command -v irssi |& /dev/null; then
+        make_link "irssi/default.theme" ".irssi/default.theme"
+    fi
 }
 
 function link_local() {
@@ -82,11 +86,6 @@ function link_local() {
     fi
 }
 
-function link_remote() {
-    make_link "irssi/solarized.theme"
-    make_link "screen/.screenrc"
-}
-
 if (("$#" == 0)) || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
     usage
     exit 0
@@ -96,6 +95,5 @@ while getopts clr opt; do
     case $opt in
         c) link_common;;
         l) link_local;;
-        r) link_remote;;
     esac
 done
