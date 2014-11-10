@@ -3,15 +3,10 @@ will find a thing or three of use here.
 
 ### Install
 
-To install, `cd` into this directory and run `./install.sh` with one or more
-of the following switches:
+See `install.sh --help`.
 
-* `-c`: Symlink common dotfiles such as .gitconfig and .vimrc.
-* `-l`: Symlink local-only dotfiles such as .xmodmaprc and terminalrc.
-* `-r`: Symlink remote-only dotfiles such as .screenrc.
-
-On Windows, symlinks for .gitconfig and .hgrc can be created by running
-`win-install.bat` with administrative rights.
+On Windows, run `win-install.bat` with adminstrative rights to create symlinks
+for .gitconfig and .hgrc.
 
 ### Credits
 

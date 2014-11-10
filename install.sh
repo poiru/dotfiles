@@ -1,5 +1,19 @@
 #!/bin/bash
 
+set -e
+
+function usage() {
+    cat <<EOF
+install.sh [options]
+
+    -c            link common files such as .gitconfig and .vimrc
+    -l            link local files such as .xmodmaprc and terminalrc
+    -r            link local files such as .screenrc
+    -h, --help    this help
+
+EOF
+}
+
 function make_link() {
     local source="$PWD/$1"
     local target="$HOME/$2"
@@ -72,6 +86,11 @@ function link_remote() {
     make_link "irssi/solarized.theme"
     make_link "screen/.screenrc"
 }
+
+if (("$#" == 0)) || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    usage
+    exit 0
+fi
 
 while getopts clr opt; do
     case $opt in
