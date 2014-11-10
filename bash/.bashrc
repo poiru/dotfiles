@@ -36,13 +36,15 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/usr/local/bin:$PATH
 fi
 
-# Change prompt to "[user: dir]$".
+# Change prompt to:
+#   [user: dir]
+#   $
 case "$TERM" in
     screen|xterm*)
         if [ -n "$SSH_CLIENT" ]; then
             PS1_HOST="@\h"
         fi
-        PS1="\[\e]0;\u@\h: \w\a\][\u$PS1_HOST: \W]\$ "
+        PS1="\[\e]0;\u@\h: \W\a\][\u$PS1_HOST: \w]\n\$ "
         ;;
 esac
 
