@@ -5,6 +5,7 @@ fi
 
 shopt -s checkwinsize
 shopt -s histappend
+shopt -u hostcomplete
 shopt -s globstar
 
 printf -v LS_COLORS '%s:' \
