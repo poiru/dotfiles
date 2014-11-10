@@ -109,57 +109,49 @@ function sourceif() {
     echo "sourceif: Not found: '$@'"
 }
 
-# Enable auto-completion.
-if ! shopt -oq posix; then
-    # To speed up bash initialization, this is set to a non-existent directory
-    # to avoid loading all the useless completion scripts found in
-    # /etc/bash_completion.d/.
-    if [ -z "${BASH_COMPLETION_COMPAT_DIR}" ]; then
-        BASH_COMPLETION_COMPAT_DIR="/none"
-    fi
-
-    sourceif /usr/share/bash-completion/bash_completion \
-             /etc/bash_completion \
-             /usr/local/share/bash-completion/bash_completion
-
-    # Make auto-completion work with some aliases.
-    function _custom_completion_loader() {
-        local cmd=$1
-        case $cmd in
-            g|git)
-                if [[ "$OSTYPE" == "darwin"* ]]; then
-                    . /usr/local/etc/bash_completion.d/git-completion.bash
-                elif [ -f "/etc/bash_completion.d/git" ]; then
-                    . /etc/bash_completion.d/git
-                else
-                    _completion_loader git
-                fi
-
-                if function_exists "__git_complete"; then
-                    __git_complete g __git_main
-                else
-                    complete -o bashdefault -o default -o nospace -F _git g
-                fi
-                ;;
-            h|hg)
-                sourceif /etc/bash_completion.d/mercurial \
-                         /usr/local/etc/bash_completion.d/hg-completion.bash
-                complete -o bashdefault -o default -o nospace -F _hg h
-                ;;
-            *)
-                _completion_loader $cmd
-                ;;
-        esac
-
-        return 124
-    }
-
-    if function_exists "_completion_loader"; then
-        complete -D -F _custom_completion_loader
-    fi
-
-    complete -F _cd -o nospace c
-fi
+# Set COMPAT_DIR to an non-existent directory to avoid loading unnecessary
+# auto-completion scripts. This makes Bash initialization considerably faster.
+[ -z "${BASH_COMPLETION_COMPAT_DIR}" ] && BASH_COMPLETION_COMPAT_DIR="/none"
+sourceif /usr/share/bash-completion/bash_completion \
+         /etc/bash_completion \
+         /usr/local/share/bash-completion/bash_completion
 
 # Make auto-completion work for names with colons.
 COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+
+# Make auto-completion work with a few aliases.
+complete -F _cd -o nospace c
+if function_exists "_completion_loader"; then
+    complete -D -F _custom_completion_loader
+fi
+
+function _custom_completion_loader() {
+    local cmd=$1
+    case $cmd in
+        g|git)
+            if [[ "$OSTYPE" == "darwin"* ]]; then
+                . /usr/local/etc/bash_completion.d/git-completion.bash
+            elif [ -f "/etc/bash_completion.d/git" ]; then
+                . /etc/bash_completion.d/git
+            else
+                _completion_loader git
+            fi
+
+            if function_exists "__git_complete"; then
+                __git_complete g __git_main
+            else
+                complete -o bashdefault -o default -o nospace -F _git g
+            fi
+            ;;
+        h|hg)
+            sourceif /etc/bash_completion.d/mercurial \
+                     /usr/local/etc/bash_completion.d/hg-completion.bash
+            complete -o bashdefault -o default -o nospace -F _hg h
+            ;;
+        *)
+            _completion_loader $cmd
+            ;;
+    esac
+
+    return 124
+}
