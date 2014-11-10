@@ -7,9 +7,28 @@ shopt -s checkwinsize
 shopt -s histappend
 shopt -s globstar
 
+printf -v LS_COLORS '%s:' \
+    'rs=0' \
+    'di=34' \
+    'ln=35' \
+    'mh=0' \
+    'pi=33' \
+    'so=35' \
+    'do=35' \
+    'bd=33;4' \
+    'cd=33;4' \
+    'or=35;4' \
+    'su=32;4' \
+    'sg=32;4' \
+    'ca=30;4' \
+    'tw=36;4' \
+    'ow=34;4' \
+    'st=36' \
+    'ex=31'
+export LS_COLORS
+
 export EDITOR=vim
 export LESS=FnRX
-export LS_COLORS='rs=0:di=34:ln=35:mh=00:pi=33:so=35:do=35:bd=33;04:cd=33;04:or=35;04:su=32;04:sg=32;04:ca=30;41:tw=36;04:ow=34;04:st=36:ex=31:'
 
 export PATH=$PATH:~/local/bin
 if [[ "$OSTYPE" == "darwin"* ]]; then
