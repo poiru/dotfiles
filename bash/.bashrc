@@ -12,7 +12,6 @@ printf -v LS_COLORS '%s:' \
     'rs=0' \
     'di=34' \
     'ln=35' \
-    'mh=0' \
     'pi=33' \
     'so=35' \
     'do=35' \
@@ -21,7 +20,6 @@ printf -v LS_COLORS '%s:' \
     'or=35;4' \
     'su=32;4' \
     'sg=32;4' \
-    'ca=30;4' \
     'tw=36;4' \
     'ow=34;4' \
     'st=36' \
