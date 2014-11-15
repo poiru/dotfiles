@@ -14,3 +14,10 @@ set mark-symlinked-directories on
 
 "\el": "\C-e | less\C-m"
 "\et": " 2>&1 | tee -a "
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
