@@ -27,7 +27,9 @@ printf -v LS_COLORS '%s:' \
 export LS_COLORS
 
 export EDITOR=vim
+
 export LESS=FnRX
+export LESSHISTFILE=/dev/null
 
 export PATH=$PATH:~/local/bin
 if [[ "$OSTYPE" == "darwin"* ]]; then
