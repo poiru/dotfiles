@@ -31,6 +31,9 @@ export EDITOR=vim
 export LESS=FnRX
 export LESSHISTFILE=/dev/null
 
+# Make man page titles and such blue.
+export LESS_TERMCAP_md=$'\E[32m'
+
 export PATH=$PATH:~/local/bin
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/usr/local/bin:$PATH
@@ -39,6 +42,9 @@ fi
 # Change prompt to:
 #   [user: dir]
 #   $
+#
+# Note that colors aren't used because that they break readline when going
+# through history.
 case "$TERM" in
     screen|xterm*)
         if [ -n "$SSH_CLIENT" ]; then
@@ -63,7 +69,6 @@ alias c=cd
 alias g=git
 alias h=hg
 alias m='MOZ_QUIET=1 ./mach'
-alias man="LESS_TERMCAP_md=$'\E[34m' man"
 alias s=subl
 alias sr='screen -rD'
 alias sk='ssh -t k screen -D -RR; clear'
