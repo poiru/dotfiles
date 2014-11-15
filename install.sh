@@ -69,7 +69,7 @@ function link_common() {
     make_link "vim" ".vim"
     make_link "vim/.vimrc"
 
-    if command -v irssi |& /dev/null; then
+    if command -v irssi > /dev/null; then
         make_link "irssi/default.theme" ".irssi/default.theme"
     fi
 }
