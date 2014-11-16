@@ -1,3 +1,7 @@
+# Be 8 bit clean.
+set input-meta on
+set output-meta on
+
 set bell-style off
 set bind-tty-special-chars off
 set colored-stats on
@@ -12,12 +16,14 @@ set mark-symlinked-directories on
 "\ea": yank-nth-arg
 "\es": yank-last-arg
 
-"\el": "\C-e | less\C-m"
-"\et": " 2>&1 | tee -a "
-
+# Move between words with Ctrl-LeftArrow and Ctrl-RightArrow.
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
 "\e[5C": forward-word
 "\e[5D": backward-word
 "\e\e[C": forward-word
 "\e\e[D": backward-word
+
+# Macros.
+"\el": "\C-e | less\C-m"
+"\et": " 2>&1 | tee -a "
