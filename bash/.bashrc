@@ -35,7 +35,7 @@ export EDITOR=vim
 export LESS=FnRX
 export LESSHISTFILE=/dev/null
 
-# Make man page titles and such blue.
+# Make man page titles and such green.
 export LESS_TERMCAP_md=$'\E[32m'
 
 export PATH=$PATH:~/local/bin
@@ -46,15 +46,15 @@ fi
 # Change prompt to:
 #   [user: dir]
 #   $
-#
-# Note that colors aren't used because that they break readline when going
-# through history.
 case "$TERM" in
     screen|xterm*)
+        PS1="\[\e]0;\u@\h: \W\a\]"
+        PS1+="\[\e[1;30m\]["
+        PS1+="\[\e[0;32m\]\u"
         if [ -n "$SSH_CLIENT" ]; then
-            PS1_HOST="@\h"
+            PS1+="@\h"
         fi
-        PS1="\[\e]0;\u@\h: \W\a\][\u$PS1_HOST: \w]\n\$ "
+        PS1+="\[\e[1;30m\]: \w]\n\$ \[\e[0m\]"
         ;;
 esac
 
