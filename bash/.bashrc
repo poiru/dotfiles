@@ -62,6 +62,8 @@ HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+unset MAILCHECK
+
 # Disable flow control (CTRL+S/CTRL+Q).
 stty -ixon
 
