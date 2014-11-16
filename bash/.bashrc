@@ -6,7 +6,11 @@ fi
 shopt -s checkwinsize
 shopt -s histappend
 shopt -u hostcomplete
-shopt -s globstar 2>/dev/null
+
+if (( BASH_VERSINFO[0] >= 4 )); then
+    shopt -s checkjobs
+    shopt -s globstar
+fi
 
 printf -v LS_COLORS '%s:' \
     'rs=0' \
