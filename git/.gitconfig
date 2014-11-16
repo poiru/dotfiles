@@ -4,6 +4,7 @@
 
 [alias]
 	a = add
+	ap = add -p
 	br = branch
 	c = commit
 	cm = commit -m
