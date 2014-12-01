@@ -2,11 +2,14 @@
 
 set -e
 
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Ask for the administrator password upfront.
 sudo -v
 
-# Disable the sound effects on boot.
-sudo nvram SystemAudioVolume=" "
+# Mute on logout.
+sudo cp "$script_dir/mute.sh" /var/root
+defaults write com.apple.loginwindow LogoutHook /var/root/mute.sh
 
 # Disable Spotlight and hide the menu bar icon.
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
