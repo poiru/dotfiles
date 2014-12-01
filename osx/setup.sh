@@ -11,6 +11,9 @@ sudo -v
 sudo cp "$script_dir/mute.sh" /var/root
 defaults write com.apple.loginwindow LogoutHook /var/root/mute.sh
 
+# Don't reopen windows when logging back in.
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+
 # Disable Spotlight and hide the menu bar icon.
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 sudo sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
@@ -45,20 +48,12 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # Enable subpixel font rendering on non-Apple LCDs.
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# Finder: Show hidden files by default.
+# Finder preferences.
 defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write -g AppleShowAllFiles -bool true
-
-# Finder: Show all filename extensions.
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Finder: Show path bar.
 defaults write com.apple.finder ShowPathbar -bool true
-
-# Finder: Display full POSIX path as window title.
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-
-# Finder: Disable the warning when changing a file extension.
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Avoid creating .DS_Store files on network volumes.
@@ -78,14 +73,13 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Don’t automatically rearrange Spaces based on most recent use.
 defaults write com.apple.dock mru-spaces -bool false
 
-# Remove the auto-hiding Dock delay.
+# Dock preferences.
+defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
-
-# Set the animation delay for hiding/showing the Dock.
 defaults write com.apple.dock autohide-time-modifier -float 0.4
-
-# Make Dock icons of hidden applications translucent.
+defaults write com.apple.dock orientation -string "bottom"
 defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock tilesize -int 48
 
 # Disable XCode indexing.
 defaults write com.apple.dt.XCode IDEIndexDisable -int 1
@@ -94,11 +88,19 @@ defaults write com.apple.dt.XCode IDEIndexDisable -int 1
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 1
 
-# Panels: expand save panel by default
+# Expand save/print panels by default.
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-
-# Panels: expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+# Airplay preferences.
+defaults write com.apple.airplay.plist showInMenuBarIfPresent -bool false
+
+# Clock preferences.
+defaults write com.apple.menuextra.clock -string "EEE d MMM  HH:mm"
+
+# Sound preferences.
+defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0.0
+defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
 
 # Kill affected apps.
 for app in "Dock" "Finder" "SystemUIServer"; do
