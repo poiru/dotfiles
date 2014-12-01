@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Ask for the administrator password upfront.
 sudo -v
 
@@ -14,8 +16,7 @@ sudo sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Se
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 # Show remaining battery time; hide percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Make key repeating work.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -84,7 +85,17 @@ defaults write com.apple.dock autohide-time-modifier -float 0.4
 defaults write com.apple.dock showhidden -bool true
 
 # Disable XCode indexing.
-defaults write com.apple.dt.XCode IDEIndexDisable 1
+defaults write com.apple.dt.XCode IDEIndexDisable -int 1
+
+# Ask for password after screensaver appears.
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 1
+
+# Panels: expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Panels: expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
 # Kill affected apps.
 for app in "Dock" "Finder" "SystemUIServer"; do
