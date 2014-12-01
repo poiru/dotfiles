@@ -23,7 +23,7 @@
 	<key>CommandSelection</key>
 	<true/>
 	<key>Control</key>
-	<integer>1</integer>
+	<integer>7</integer>
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
@@ -50,6 +50,13 @@
 	<real>1</real>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x19-0x120000</key>
+		<dict>
+			<key>Action</key>
+			<integer>22</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x56-0x60000</key>
 		<dict>
 			<key>Action</key>
@@ -63,6 +70,13 @@
 			<integer>25</integer>
 			<key>Text</key>
 			<string>Quit iTerm</string>
+		</dict>
+		<key>0x9-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>22</integer>
+			<key>Text</key>
+			<string></string>
 		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
@@ -187,7 +201,7 @@
 	<key>JobName</key>
 	<false/>
 	<key>LeftCommand</key>
-	<integer>7</integer>
+	<integer>1</integer>
 	<key>LeftOption</key>
 	<integer>2</integer>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -230,7 +244,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>288 148 214 492 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>642 86 924 485 0 0 1920 1178 </string>
+	<string>37 244 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>960 4 960 1174 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -990,6 +1004,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>

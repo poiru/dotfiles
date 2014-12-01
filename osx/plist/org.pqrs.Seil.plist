@@ -22,14 +22,16 @@
 		<integer>1</integer>
 		<key>enable_control_l</key>
 		<integer>1</integer>
+		<key>enable_delete</key>
+		<integer>1</integer>
 		<key>keycode_capslock</key>
 		<integer>80</integer>
 		<key>keycode_command_l</key>
 		<integer>59</integer>
 		<key>keycode_control_l</key>
 		<integer>55</integer>
-		<key>keycode_option_l</key>
-		<integer>55</integer>
+		<key>keycode_delete</key>
+		<integer>80</integer>
 	</dict>
 </dict>
 </plist>

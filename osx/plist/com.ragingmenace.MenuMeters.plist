@@ -7,7 +7,7 @@
 	<key>CPUDisplayMode</key>
 	<integer>1</integer>
 	<key>CPUGraphLength</key>
-	<integer>33</integer>
+	<integer>11</integer>
 	<key>CPUInterval</key>
 	<real>5</real>
 	<key>CPUPercentDisplayMode</key>
@@ -32,6 +32,8 @@
 	<real>5</real>
 	<key>DiskSelectMode</key>
 	<integer>0</integer>
+	<key>DiskSpaceForceBaseTwo</key>
+	<false/>
 	<key>MemActiveColor</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMChARm

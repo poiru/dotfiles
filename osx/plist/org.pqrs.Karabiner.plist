@@ -29,11 +29,11 @@
 		<integer>1</integer>
 		<key>parameter.keyoverlaidmodifier_timeout</key>
 		<integer>120</integer>
-		<key>private.disable_control_command_f</key>
-		<integer>1</integer>
 		<key>private.disable_shift_commandq</key>
 		<integer>1</integer>
 		<key>private.f19_to_shift_optionr</key>
+		<integer>1</integer>
+		<key>private.pageupdown</key>
 		<integer>1</integer>
 		<key>private.swap_commandl_leftright_optionl_leftright</key>
 		<integer>1</integer>
@@ -41,17 +41,15 @@
 		<integer>1</integer>
 		<key>private.terminal_control_click_to_command_click</key>
 		<integer>1</integer>
-		<key>private.terminal_swap_commandl_controll</key>
-		<integer>1</integer>
 		<key>private.å_to_backspace</key>
 		<integer>1</integer>
 		<key>remap.app_firefox_commandA2controlAzzz</key>
 		<integer>1</integer>
-		<key>remap.commandDelete2optionLdelete</key>
-		<integer>1</integer>
 		<key>remap.ejecttopower</key>
 		<integer>1</integer>
 		<key>remap.optionR_arrow2PgUpDnHomeEnd</key>
+		<integer>1</integer>
+		<key>remap.option_space_to_space</key>
 		<integer>1</integer>
 		<key>remap.private.disablecommandq</key>
 		<integer>1</integer>
@@ -77,6 +75,8 @@
 	<key>isStatusWindowShowPointingButtonLock</key>
 	<false/>
 	<key>isStatusbarEnable</key>
+	<false/>
+	<key>kIsAXNotifierEnabled</key>
 	<false/>
 </dict>
 </plist>
