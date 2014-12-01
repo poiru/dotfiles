@@ -3,21 +3,53 @@
   <item>
     <name>F19 to Shift+Option_R (or Escape)</name>
     <identifier>private.f19_to_shift_optionr</identifier>
-    <autogen>__KeyOverlaidModifier__ KeyCode::F19, KeyCode::OPTION_R, ModifierFlag::SHIFT_R, KeyCode::ESCAPE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F19, KeyCode::OPTION_R, ModifierFlag::SHIFT_R</autogen>
   </item>
   <item>
     <name>Disable Shift+Command+Q</name>
     <identifier>private.disable_shift_commandq</identifier>
-    <autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::VK_NONE</autogen> 
-  </item>
-  <item>
-    <name>Disable Control+Command+F</name>
-    <identifier>private.disable_control_command_f</identifier>
-    <autogen>__KeyToKey__ KeyCode::F, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::Q, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE,
+      KeyCode::VK_NONE
+    </autogen>
   </item>
   <item>
     <name>Å to Backspace</name>
     <identifier>private.å_to_backspace</identifier>
-    <autogen>__KeyToKey__ KeyCode::GERMAN_U_UMLAUT, ModifierFlag::NONE, KeyCode::DELETE</autogen> 
+    <autogen>__KeyToKey__ KeyCode::GERMAN_U_UMLAUT, ModifierFlag::NONE, KeyCode::DELETE</autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::GERMAN_U_UMLAUT, ModifierFlag::COMMAND_L,
+      KeyCode::DELETE, ModifierFlag::OPTION_L
+    </autogen>
+  </item>
+  <item>
+    <name>Swap Command_L-left/right arrow and Option_L-left/right arrow</name>
+    <identifier>private.swap_commandl_leftright_optionl_leftright</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+      KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
+    </autogen>
+  </item>
+  <item>
+    <name>PageUp/Down</name>
+    <identifier>private.pageupdown</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::BRACKET_RIGHT,
+      KeyCode::PAGEUP
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::BACKSLASH,
+      KeyCode::PAGEDOWN
+    </autogen>
   </item>
 </root>
