@@ -83,8 +83,9 @@ function link_local() {
         make_link "x/.xscreensaver"
         make_link "x/.xsessionrc"
     elif [[ "$OSTYPE" == "darwin"* ]]; then
-        make_link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages/User"
+        make_link "osx/Custom.keylayout" "Library/Keyboard Layouts/Custom.keylayout"
         make_link "karabiner/private.xml" "Library/Application Support/Karabiner/private.xml"
+        make_link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages/User"
     fi
 }
 
