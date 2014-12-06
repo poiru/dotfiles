@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 2.2.8 on 2014-08-22 at 22:36 (PDT)-->
-<!--Last edited by Ukelele version 2.2.8 on 2014-12-06 at 13:39 (GMT+2)-->
+<!--Last edited by Ukelele version 2.2.8 on 2014-12-06 at 14:02 (GMT+2)-->
 <keyboard group="0" id="9435" name="Custom" maxout="1">
     <layouts>
         <layout first="0" last="0" modifiers="4c" mapSet="96c"/>
@@ -292,7 +292,7 @@
             <key code="46" output=")"/>
             <key code="47" output=""/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
+            <key code="49" output=" "/>
             <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
