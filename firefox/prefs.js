@@ -1,0 +1,11 @@
+user_pref("accessibility.typeaheadfind.flashBar", 0);
+user_pref("accessibility.typeaheadfind.prefillwithselection", true);
+user_pref("browser.backspace_action", 2);
+user_pref("browser.bookmarks.restore_default_bookmarks", false);
+user_pref("browser.newtab.url", "about:blank");
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.showQuitWarning", true);
+user_pref("browser.startup.homepage", "about:blank");
+user_pref("browser.tabs.animate", false);
+user_pref("browser.tabs.closeWindowWithLastTab", false);
+user_pref("browser.tabs.warnOnClose", false);
