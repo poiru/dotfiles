@@ -9,7 +9,8 @@ sudo -v
 
 # Mute on logout.
 sudo cp "$script_dir/mute.sh" /var/root
-defaults write com.apple.loginwindow LogoutHook /var/root/mute.sh
+sudo chmod +x /var/root/mute.sh
+sudo defaults write com.apple.loginwindow LogoutHook /var/root/mute.sh
 
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
