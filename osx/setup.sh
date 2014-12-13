@@ -16,8 +16,8 @@ sudo defaults write com.apple.loginwindow LogoutHook /var/root/mute.sh
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
 # Disable Spotlight and hide the menu bar icon.
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-sudo sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+sudo mdutil -a -i off
+sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Disable Notification Center.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
@@ -50,8 +50,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Finder preferences.
-defaults write com.apple.finder AppleShowAllFiles -bool true
-defaults write -g AppleShowAllFiles -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -94,16 +92,14 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
 # Airplay preferences.
-defaults write com.apple.airplay.plist showInMenuBarIfPresent -bool false
+defaults write com.apple.airplay showInMenuBarIfPresent -bool false
 
 # Clock preferences.
-defaults write com.apple.menuextra.clock -string "EEE d MMM  HH:mm"
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 
 # Sound preferences.
 defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0.0
 defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
 
 # Kill affected apps.
-for app in "Dock" "Finder" "SystemUIServer"; do
-    killall "${app}" > /dev/null 2>&1
-done
+killall "Dock" "Finder" "SystemUIServer" > /dev/null 2>&1
