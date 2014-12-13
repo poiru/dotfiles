@@ -1,2 +1,2 @@
 #!/bin/sh
-osascript -e ‘set volume with output muted’
+osascript -e 'set volume with output muted'
