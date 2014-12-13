@@ -4,10 +4,10 @@
 <dict>
 	<key>BackgroundAlertSuppressed</key>
 	<true/>
-	<key>BlacklistedWindowRects</key>
-	<array>
-		<string>iTerm - (-2560.000000, -105.000000) 853.000000x1418.000000</string>
-	</array>
+	<key>HockeySDKAutomaticallySendCrashReports</key>
+	<false/>
+	<key>HockeySDKCrashReportActivated</key>
+	<true/>
 	<key>MakeLarger</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -166,7 +166,7 @@
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-11-15T19:05:52Z</date>
+	<date>2014-12-12T16:20:00Z</date>
 	<key>SUSkippedVersion</key>
 	<string>395</string>
 	<key>StatusItemEnabled</key>

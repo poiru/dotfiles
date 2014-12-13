@@ -16,14 +16,6 @@
 	<integer>0</integer>
 	<key>sysctl</key>
 	<dict>
-		<key>enable_capslock</key>
-		<integer>1</integer>
-		<key>enable_command_l</key>
-		<integer>1</integer>
-		<key>enable_control_l</key>
-		<integer>1</integer>
-		<key>enable_delete</key>
-		<integer>1</integer>
 		<key>keycode_capslock</key>
 		<integer>80</integer>
 		<key>keycode_command_l</key>
