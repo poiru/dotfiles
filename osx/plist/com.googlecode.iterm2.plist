@@ -113,6 +113,13 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xf702-0x3c0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>22</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0xf703-0x300000</key>
 		<dict>
 			<key>Action</key>
@@ -124,6 +131,13 @@
 		<dict>
 			<key>Action</key>
 			<integer>34</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf703-0x3c0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>22</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -241,10 +255,15 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>288 148 214 492 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>37 339 605 485 0 0 1920 1177 </string>
+	<string>37 339 924 485 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>960 4 960 1173 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1054,7 +1073,7 @@
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>RightOption</key>
-	<integer>3</integer>
+	<integer>8</integer>
 	<key>SUAutomaticallyUpdate</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
