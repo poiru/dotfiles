@@ -1,5 +1,5 @@
 @echo off
 
-set src=%~dp0src
-mklink "%USERPROFILE%\.gitconfig" "%src%\.gitconfig"
-mklink "%USERPROFILE%\.hgrc" "%src%\.hgrc"
+set script_dir=%~dp0
+mklink "%USERPROFILE%\.gitconfig" "%script_dir%git\.gitconfig"
+mklink "%USERPROFILE%\.hgrc" "%script_dir%hg\.hgrc"
