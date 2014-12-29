@@ -1,6 +1,3 @@
 [submodule "external/vim-emacsmodeline"]
 	path = external/vim-emacsmodeline
 	url = https://github.com/sfiera/vim-emacsmodeline
-[submodule "external/vim-rust"]
-	path = external/vim-rust
-	url = https://github.com/wting/rust.vim
