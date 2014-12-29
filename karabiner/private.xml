@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <root>
   <item>
-    <name>F19 to Shift+Option_R (or Escape)</name>
-    <identifier>private.f19_to_shift_optionr</identifier>
-    <autogen>__KeyToKey__ KeyCode::F19, KeyCode::OPTION_R, ModifierFlag::SHIFT_R</autogen>
-  </item>
-  <item>
     <name>Disable Shift+Command+Q</name>
     <identifier>private.disable_shift_commandq</identifier>
     <autogen>
