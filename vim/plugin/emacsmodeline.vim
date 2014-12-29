@@ -1,1 +1,0 @@
-external/vim-emacsmodeline/plugin/emacsmodeline.vim
