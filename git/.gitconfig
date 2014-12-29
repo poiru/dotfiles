@@ -7,9 +7,9 @@
 	ap = add -p
 	br = branch
 	c = commit
-	cm = commit -m
 	ca = commit --amend --no-edit
 	cae = commit --amend
+	cm = commit -m
 	co = checkout
 	d = diff
 	dc = diff --cached
@@ -19,8 +19,9 @@
 	p = pull -r
 	plu = pull upstream master
 	pso = push origin master
-	ri = rebase -i
 	rc = rebase --continue
+	ri = rebase -i
+	rh = reset HEAD
 	s = status -s --ignore-submodules
 
 [color]
