@@ -27,6 +27,9 @@
 [color]
 	ui = true
 
+[commit]
+  status = false
+
 [core]
 	excludesfile = ~/.gitignore
 
