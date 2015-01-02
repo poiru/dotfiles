@@ -5,7 +5,7 @@
 [alias]
 	a = add
 	ap = add -p
-	br = branch
+	b = branch
 	c = commit
 	ca = commit --amend --no-edit
 	cae = commit --amend
@@ -15,14 +15,16 @@
 	dc = diff --cached
 	ds = diff --stat
 	h = show
-	lg = log --format='%C(yellow)%h%Creset %Cgreen%cr%Creset %s (%an)%C(yellow)%d%Creset'
+	l = log --graph --format='%C(yellow)%h%Creset %Cgreen%cr%Creset %s (%an)%C(yellow)%d%Creset'
 	p = pull -r
-	plu = pull upstream master
-	pso = push origin master
+	puh = pull -r upstream HEAD
+	pom = push origin master
 	rc = rebase --continue
 	ri = rebase -i
 	rh = reset HEAD
 	s = status -s --ignore-submodules
+	sp = stash pop
+	ss = stash save
 
 [color]
 	ui = true
