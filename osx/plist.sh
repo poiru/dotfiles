@@ -5,17 +5,18 @@ set -o errexit -o pipefail
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 plists=(
-    "com.divisiblebyzero.Spectacle.plist"
-    "com.googlecode.iterm2.plist"
-    "com.ragingmenace.MenuMeters.plist"
-    "org.pqrs.Karabiner.plist"
-    "org.pqrs.Seil.plist"
+    "com.apple.symbolichotkeys"
+    "com.divisiblebyzero.Spectacle"
+    "com.googlecode.iterm2"
+    "org.pqrs.Karabiner"
 )
 
 for plist in "${plists[@]}"; do
-    local_file="$script_dir/plist/$plist"
-    library_file="$HOME/Library/Preferences/$plist"
+    local_file="$script_dir/plist/$plist.plist"
     if [[ "$1" == "export" ]]; then
+       library_file="$HOME/Library/Preferences/$plist.plist"
        plutil -convert xml1 "$library_file" -o "$local_file"
+    elif [[ "$1" == "import" ]]; then
+        defaults import "$plist" "$script_dir/plist/$plist.plist"
     fi
 done
