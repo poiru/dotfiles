@@ -29,28 +29,28 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Disable smart quotes and dashes as they’re annoying when typing code.
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 
 # Enable tap to click for this user and for the login screen.
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults -currentHost write -g com.apple.mouse.tapBehavior -int 1
+defaults write -g com.apple.mouse.tapBehavior -int 1
 
 # Enable full keyboard access for all controls.
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+defaults write -g AppleKeyboardUIMode -int 3
 
 # Disable auto-correct.
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Disable shadow in screenshots.
 defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs.
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+defaults write -g AppleFontSmoothing -int 2
 
 # Finder preferences.
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write -g AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -88,8 +88,8 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 1
 
 # Expand save/print panels by default.
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+defaults write -g PMPrintingExpandedStateForPrint -bool true
 
 # Airplay preferences.
 defaults write com.apple.airplay showInMenuBarIfPresent -bool false
