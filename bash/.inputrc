@@ -13,8 +13,11 @@ set mark-symlinked-directories on
 
 "\C-b": shell-backward-word
 "\C-f": shell-forward-word
+"\C-d": unix-filename-rubout
 "\ea": yank-nth-arg
 "\es": yank-last-arg
+"\ee": shell-expand-line
+"\ez": undo
 
 # Move between words with Ctrl-LeftArrow and Ctrl-RightArrow.
 "\e[1;5C": forward-word
