@@ -2,11 +2,14 @@
 username = Birunthan Mohanathas <birunthan@mohanathas.com>
 
 [alias]
+d = diff
+ds = diff --stat
 p = !$HG qpop -a && $HG pull -u
 uc = update -C
 qpr = !$HG qpush && $HG qref
 qpra = !while $HG qpush && $HG qref; do :; done
 qs = qseries -s
+qds = qdiff --stat
 qstatus = status --rev -2:.
 
 [defaults]
