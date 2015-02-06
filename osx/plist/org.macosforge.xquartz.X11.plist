@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSWindow Frame x11_apps</key>
+	<string>0 4 1920 1173 0 0 1920 1177 </string>
+	<key>SULastCheckTime</key>
+	<date>2015-02-06T19:20:36Z</date>
+	<key>app_to_run</key>
+	<string>''</string>
+	<key>apps_menu</key>
+	<array>
+		<array>
+			<string>xterm</string>
+			<string>xterm</string>
+			<string></string>
+		</array>
+		<array>
+			<string>diffuse</string>
+			<string>/usr/local/bin/diffuse</string>
+			<string></string>
+		</array>
+	</array>
+	<key>cache_fonts</key>
+	<true/>
+	<key>done_xinit_check</key>
+	<true/>
+	<key>enable_key_equivalents</key>
+	<false/>
+	<key>login_shell</key>
+	<string>/bin/sh</string>
+	<key>no_auth</key>
+	<false/>
+	<key>nolisten_tcp</key>
+	<true/>
+	<key>option_sends_alt</key>
+	<false/>
+	<key>startx_script</key>
+	<string>/opt/X11/bin/startx -- /opt/X11/bin/Xquartz</string>
+	<key>sync_keymap</key>
+	<false/>
+</dict>
+</plist>
