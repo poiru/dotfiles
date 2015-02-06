@@ -1,0 +1,7 @@
+style "user-font" {
+    font_name = "Lucida Grande 10"
+}
+widget_class "*" style "user-font"
+
+gtk-font-name="Lucida Grande 10"
+gtk-enable-mnemonics = 0
