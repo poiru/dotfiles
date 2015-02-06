@@ -123,9 +123,16 @@ function sourceif() {
 # Set COMPAT_DIR to an non-existent directory to avoid loading unnecessary
 # auto-completion scripts. This makes Bash initialization considerably faster.
 [ -z "${BASH_COMPLETION_COMPAT_DIR}" ] && BASH_COMPLETION_COMPAT_DIR="/none"
-sourceif /usr/share/bash-completion/bash_completion \
-         /etc/bash_completion \
-         /usr/local/share/bash-completion/bash_completion
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # bash-completion2 doesn't play all that well with older Bashes.
+    if (( BASH_VERSINFO[0] >= 4 )); then
+        sourceif /usr/local/share/bash-completion/bash_completion
+    fi
+else
+    sourceif /usr/share/bash-completion/bash_completion \
+             /etc/bash_completion
+fi
 
 # Make auto-completion work for names with colons.
 COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
