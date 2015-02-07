@@ -8,9 +8,9 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 sudo -v
 
 # Mute on logout.
-sudo cp "$script_dir/mute.sh" /var/root
-sudo chmod +x /var/root/mute.sh
-sudo defaults write com.apple.loginwindow LogoutHook /var/root/mute.sh
+sudo cp "$script_dir/logout.sh" /var/root
+sudo chmod +x /var/root/logout.sh
+sudo defaults write com.apple.loginwindow LogoutHook /var/root/logout.sh
 
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
