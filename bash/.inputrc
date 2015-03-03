@@ -29,4 +29,4 @@ set mark-symlinked-directories on
 
 # Macros.
 "\el": "\C-e | less\C-m"
-"\et": " 2>&1 | tee -a "
+"\et": " |& tee -a "
