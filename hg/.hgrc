@@ -2,7 +2,7 @@
 username = Birunthan Mohanathas <birunthan@mohanathas.com>
 
 [alias]
-d = diff
+d = !$HG diff
 ds = diff --stat
 p = !$HG qpop -a && $HG pull -u
 uc = update -C
