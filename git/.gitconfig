@@ -16,7 +16,7 @@
 	ds = diff --stat
 	h = show
 	l = log --graph --format='%C(yellow)%h%Creset %Cgreen%cr%Creset %s (%an)%C(yellow)%d%Creset'
-	p = pull -r
+	p = pull --r --prune
 	puh = pull -r upstream HEAD
 	pom = push origin master
 	rc = rebase --continue
@@ -25,6 +25,7 @@
 	s = status -s --ignore-submodules
 	sp = stash pop
 	ss = stash save
+	uc = reset HEAD~1 --mixed
 
 [color]
 	ui = true
