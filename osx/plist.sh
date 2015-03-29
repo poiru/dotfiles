@@ -14,10 +14,10 @@ plists=(
 
 for plist in "${plists[@]}"; do
     local_file="$script_dir/plist/$plist.plist"
-    if [[ "$1" == "export" ]]; then
+    if [[ "$1" == "save" ]]; then
        library_file="$HOME/Library/Preferences/$plist.plist"
        plutil -convert xml1 "$library_file" -o "$local_file"
-    elif [[ "$1" == "import" ]]; then
+    elif [[ "$1" == "apply" ]]; then
         defaults import "$plist" "$script_dir/plist/$plist.plist"
     fi
 done
