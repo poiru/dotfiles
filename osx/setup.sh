@@ -12,6 +12,10 @@ sudo cp "$script_dir/logout.sh" /var/root
 sudo chmod +x /var/root/logout.sh
 sudo defaults write com.apple.loginwindow LogoutHook /var/root/logout.sh
 
+sudo cp "login.sh" /var/root
+sudo chmod +x /var/root/login.sh
+sudo defaults write com.apple.loginwindow LoginHook /var/root/login.sh
+
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
@@ -22,8 +26,10 @@ sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 # Disable Notification Center.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
-# Show remaining battery time; hide percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+defaults write -g AppleInterfaceStyle -string "Dark"
+defaults write -g AppleLocale -string "en_FI"
+defaults write -g AppleMeasurementUnits -string "Centimeters"
+defaults write -g AppleMetricUnits -bool true
 
 # Make key repeating work.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -31,6 +37,9 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Disable smart quotes and dashes as they’re annoying when typing code.
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 0
+defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGesture -int 0
 
 # Enable tap to click for this user and for the login screen.
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -42,9 +51,6 @@ defaults write -g AppleKeyboardUIMode -int 3
 
 # Disable auto-correct.
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Disable shadow in screenshots.
-defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs.
 defaults write -g AppleFontSmoothing -int 2
@@ -63,8 +69,18 @@ defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
+# Disable shadow in screenshots.
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# Show remaining battery time; hide percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
 # Disable Dashboard.
 defaults write com.apple.dashboard mcx-disabled -bool true
+
+# Disable AirDrop and AWDL.
+defaults write com.apple.NetworkBrowser DisableAirDrop -bool true
+sudo ifconfig awdl0 down
 
 # Don’t show Dashboard as a Space.
 defaults write com.apple.dock dashboard-in-overlay -bool true
