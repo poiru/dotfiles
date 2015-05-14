@@ -3,6 +3,7 @@ user_pref("accessibility.typeaheadfind.prefillwithselection", true);
 user_pref("browser.backspace_action", 2);
 user_pref("browser.bookmarks.restore_default_bookmarks", false);
 user_pref("browser.newtab.url", "about:blank");
+user_pref("browser.pocket.enabled", false);
 user_pref("browser.readinglist.enabled", false);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.selfsupport.url", "");
