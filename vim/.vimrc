@@ -38,6 +38,7 @@ set guicursor+=a:blinkon0
 " Show line numbers and highlight current line.
 set number
 set cursorline
+set ruler
 
 " Show matching brackets/parenthesis.
 set showmatch
