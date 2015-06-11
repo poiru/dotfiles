@@ -100,6 +100,14 @@ function _calc() {
 }
 
 # Helpful functions.
+function f() {
+    find . \
+        -not '(' -type d -name '.git' -prune ')' \
+        -not '(' -type d -name '.hg' -prune ')' \
+        -not '(' -type d -name 'obj-*' -prune ')' \
+        $@
+}
+
 function function_exists() {
     declare -f -F $1 > /dev/null
     return $?
