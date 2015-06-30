@@ -11,6 +11,8 @@
 	cae = commit --amend
 	cm = commit -m
 	co = checkout
+	cp = cherry-pick
+	cpc = cherry-pick --continue
 	d = diff
 	dc = diff --cached
 	ds = diff --stat
