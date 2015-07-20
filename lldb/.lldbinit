@@ -1,0 +1,4 @@
+settings set target.inline-breakpoint-strategy always
+
+script topsrcdir = "/Users/poiru/projects/mozilla-central"
+command source -s true "/Users/poiru/projects/mozilla-central/.lldbinit"
