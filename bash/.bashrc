@@ -74,7 +74,7 @@ alias adu='sudo apt-get update &&
 alias c=cd
 alias g=git
 alias h=hg
-alias m='MOZ_QUIET=1 ./mach'
+alias m='I_PREFER_A_SUBOPTIMAL_MERCURIAL_EXPERIENCE=1 MOZ_QUIET=1 ./mach'
 alias s=subl
 alias sr='screen -rD'
 alias sk='ssh -t k screen -D -RR; clear'
