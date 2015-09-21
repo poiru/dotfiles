@@ -117,5 +117,11 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0.0
 defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
 
+# Safari preferences.
+defaults write com.apple.Safari HistoryAgeInDaysLimit 1
+defaults write com.apple.Safari OpenPrivateWindowWhenNotRestoringSessionAtLaunch 1
+defaults write com.apple.Safari SearchProviderIdentifier "com.duckduckgo"
+defaults write com.apple.Safari SuppressSearchSuggestions 1
+
 # Kill affected apps.
 killall "Dock" "Finder" "SystemUIServer" > /dev/null 2>&1
