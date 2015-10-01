@@ -12,7 +12,7 @@
   <item>
     <name>Å to Backspace</name>
     <identifier>private.å_to_backspace</identifier>
-    <autogen>__KeyToKey__ KeyCode::GERMAN_U_UMLAUT, ModifierFlag::NONE, KeyCode::DELETE</autogen>
+    <autogen>__KeyToKey__ KeyCode::GERMAN_U_UMLAUT, KeyCode::DELETE</autogen>
     <autogen>
       __KeyToKey__
       KeyCode::GERMAN_U_UMLAUT, ModifierFlag::COMMAND_L,
@@ -45,6 +45,187 @@
       __KeyToKey__
       KeyCode::BACKSLASH,
       KeyCode::PAGEDOWN
+    </autogen>
+  </item>
+  <item>
+    <name>Finnish symbols</name>
+    <identifier>private.finnish_symbols</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::SEMICOLON, ModifierFlag::NONE,
+      KeyCode::KEY_1
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::SEMICOLON, ModifierFlag::SHIFT_L,
+      KeyCode::KEY_2
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::QUOTE, ModifierFlag::NONE,
+      KeyCode::KEY_3
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::QUOTE, ModifierFlag::SHIFT_L,
+      KeyCode::KEY_4
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::E, ModifierFlag::FN | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+      KeyCode::KEY_5
+    </autogen>
+  </item>
+  <item>
+    <name>Fn symbols</name>
+    <identifier>private.fn_symbols</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::KEY_2, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_2, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::KEY_3, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_6, ModifierFlag::SHIFT_L
+    </autogen>
+
+    <autogen>
+      --KeyToKey--
+      KeyCode::Q, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::EQUAL
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::W, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_1, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::E, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::SLASH, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::R, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::BACKSLASH, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::T, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::COMMA, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::Y, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::U, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::BACKSLASH
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::I, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::BRACKET_RIGHT
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::O, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::P, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::MINUS, ModifierFlag::SHIFT_L
+    </autogen>
+
+    <autogen>
+      --KeyToKey--
+      KeyCode::A, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::QUOTE, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::S, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::QUOTE
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::D, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::SEMICOLON
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::F, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::EQUAL
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::G, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::DOT, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::H, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::SLASH
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::J, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_9, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::K, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::L, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::BRACKET_LEFT
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::SEMICOLON, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::SEMICOLON, ModifierFlag::SHIFT_L
+    </autogen>
+
+    <autogen>
+      --KeyToKey--
+      KeyCode::X, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::BACKQUOTE
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::C, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_5, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::V, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_7, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::B, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_4, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::N, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_8, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::M, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_0, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::COMMA, ModifierFlag::FN | ModifierFlag::NONE,
+      KeyCode::KEY_3, ModifierFlag::SHIFT_L
     </autogen>
   </item>
 </root>
