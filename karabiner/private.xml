@@ -93,7 +93,7 @@
     <autogen>
       --KeyToKey--
       KeyCode::Q, ModifierFlag::FN | ModifierFlag::NONE,
-      KeyCode::EQUAL
+      KeyCode::EQUAL, ModifierFlag::SHIFT_L
     </autogen>
     <autogen>
       --KeyToKey--
@@ -128,12 +128,12 @@
     <autogen>
       --KeyToKey--
       KeyCode::I, ModifierFlag::FN | ModifierFlag::NONE,
-      KeyCode::BRACKET_RIGHT
+      KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::O, ModifierFlag::FN | ModifierFlag::NONE,
-      KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L
+      KeyCode::BRACKET_RIGHT
     </autogen>
     <autogen>
       --KeyToKey--
