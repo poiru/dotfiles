@@ -31,9 +31,15 @@
 		<integer>120</integer>
 		<key>private.disable_shift_commandq</key>
 		<integer>1</integer>
+		<key>private.finnish_symbols</key>
+		<integer>1</integer>
+		<key>private.fn_symbols</key>
+		<integer>1</integer>
 		<key>private.pageupdown</key>
 		<integer>1</integer>
 		<key>private.swap_commandl_leftright_optionl_leftright</key>
+		<integer>1</integer>
+		<key>private.å_to_backspace</key>
 		<integer>1</integer>
 		<key>remap.swap_commandtabcontroltab</key>
 		<integer>1</integer>
