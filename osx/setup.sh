@@ -33,6 +33,8 @@ defaults write -g AppleMetricUnits -bool true
 
 # Make key repeating work.
 defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g InitialKeyRepeat -int 30
+defaults write -g KeyRepeat -int 3
 
 # Disable smart quotes and dashes as they’re annoying when typing code.
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
