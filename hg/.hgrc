@@ -31,6 +31,9 @@ unified = 8
 pager = less -FSRX
 ignore = version, help, update, serve, record
 
+[patch]
+fuzz = 5
+
 [paths]
 moztry = ssh://hg.mozilla.org/try
 
