@@ -120,10 +120,14 @@ defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0.0
 defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
 
 # Safari preferences.
-defaults write com.apple.Safari HistoryAgeInDaysLimit 1
-defaults write com.apple.Safari OpenPrivateWindowWhenNotRestoringSessionAtLaunch 1
+defaults write com.apple.Safari HistoryAgeInDaysLimit -int 1
+defaults write com.apple.Safari HomePage -string "about:blank"
+defaults write com.apple.Safari NewTabBehavior -int 1
+defaults write com.apple.Safari NewWindowBehavior -int 1
+defaults write com.apple.Safari OpenPrivateWindowWhenNotRestoringSessionAtLaunch -bool true
+defaults write com.apple.Safari PreloadTopHit -bool false
 defaults write com.apple.Safari SearchProviderIdentifier "com.duckduckgo"
-defaults write com.apple.Safari SuppressSearchSuggestions 1
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
 # Kill affected apps.
 killall "Dock" "Finder" "SystemUIServer" > /dev/null 2>&1
