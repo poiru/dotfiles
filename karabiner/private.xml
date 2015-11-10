@@ -53,27 +53,27 @@
     <autogen>
       --KeyToKey--
       KeyCode::SEMICOLON, ModifierFlag::NONE,
-      KeyCode::KEY_1
+      KeyCode::KEY_1, ModifierFlag::OPTION_L
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::SEMICOLON, ModifierFlag::SHIFT_L,
-      KeyCode::KEY_2
+      KeyCode::KEY_2, ModifierFlag::OPTION_L
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::QUOTE, ModifierFlag::NONE,
-      KeyCode::KEY_3
+      KeyCode::KEY_3, ModifierFlag::OPTION_L
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::QUOTE, ModifierFlag::SHIFT_L,
-      KeyCode::KEY_4
+      KeyCode::KEY_4, ModifierFlag::OPTION_L
     </autogen>
     <autogen>
       --KeyToKey--
       KeyCode::E, ModifierFlag::FN | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
-      KeyCode::KEY_5
+      KeyCode::KEY_5, ModifierFlag::OPTION_L
     </autogen>
   </item>
   <item>
