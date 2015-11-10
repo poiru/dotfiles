@@ -20,6 +20,7 @@ user_pref("network.cookie.lifetimePolicy", 2);
 user_pref("network.http.referer.spoofSource", true);
 user_pref("network.http.referer.trimmingPolicy", 2);
 user_pref("network.http.referer.XOriginPolicy", 2);
+user_pref("places.history.expiration.max_pages", 1000);
 user_pref("reader.parse-on-load.enabled", false);
 user_pref("readinglist.scheduler.enabled", false);
 user_pref("toolkit.telemetry.enabled", false);
