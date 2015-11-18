@@ -12,8 +12,8 @@ settings = {
   "fe-text" = {
     actlist_sort = "refnum";
     scroll_page_count = "/1.1";
-    scroll = "no";
-    scrollback_time = "5d";
+    scroll = "yes";
+    scrollback_time = "4d";
     paste_verify_line_count = "1";
     scrollback_lines = "2000";
   };
@@ -28,7 +28,7 @@ settings = {
     activity_hide_level = "QUITS JOINS PARTS NICKS";
     window_history = "yes";
     hilight_color = "%b";
-    beep_msg_level = "MSGS HILIGHT";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
     beep_when_window_active = "yes";
     bell_beeps = "yes";
     beep_when_away = "yes";
@@ -37,6 +37,7 @@ settings = {
     max_command_history = "100";
     hilight_nick_matches = "no";
     emphasis_multiword = "yes";
+    activity_hilight_level = "MSGS DCCMSGS";
   };
   "irc/core" = { alternate_nick = "poiru_"; skip_motd = "yes"; };
   "perl/core/scripts" = {
