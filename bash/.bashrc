@@ -137,7 +137,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     if (( BASH_VERSINFO[0] >= 4 )); then
         sourceif /usr/local/share/bash-completion/bash_completion
     fi
-else
+elif [[ "$OSTYPE" != "msys" ]]; then
+    # bash_completion is automatically loaded by msys.
     sourceif /usr/share/bash-completion/bash_completion \
              /etc/bash_completion
 fi
