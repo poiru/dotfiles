@@ -31,6 +31,8 @@ defaults write -g AppleLocale -string "en_FI"
 defaults write -g AppleMeasurementUnits -string "Centimeters"
 defaults write -g AppleMetricUnits -bool true
 
+defaults write -g AppleShowScrollBars -string WhenScrolling
+
 # Make key repeating work.
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write -g InitialKeyRepeat -int 30
@@ -44,9 +46,10 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -
 defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGesture -int 0
 
 # Enable tap to click for this user and for the login screen.
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write -g com.apple.mouse.tapBehavior -int 1
 defaults write -g com.apple.mouse.tapBehavior -int 1
+
+defaults write -g com.apple.trackpad.scaling -float 1.5
 
 # Enable full keyboard access for all controls.
 defaults write -g AppleKeyboardUIMode -int 3
