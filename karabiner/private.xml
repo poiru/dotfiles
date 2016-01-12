@@ -46,6 +46,11 @@
       KeyCode::BACKSLASH,
       KeyCode::PAGEDOWN
     </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+      KeyCode::H, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+    </autogen>
   </item>
   <item>
     <name>Finnish symbols</name>
@@ -75,6 +80,16 @@
       KeyCode::E, ModifierFlag::FN | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
       KeyCode::KEY_5, ModifierFlag::OPTION_L
     </autogen>
+  </item>
+  <item>
+    <name>F19 to FN</name>
+    <identifier>private.f19_fn</identifier>
+    <autogen>__KeyToKey__ KeyCode::F19, KeyCode::FN</autogen>
+  </item>
+  <item>
+    <name>F4 to Launchpad</name>
+    <identifier>private.f4_launchpad</identifier>
+    <autogen>__KeyToKey__ KeyCode::F4, KeyCode::LAUNCHPAD</autogen>
   </item>
   <item>
     <name>Fn symbols</name>
