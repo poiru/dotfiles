@@ -10,6 +10,7 @@ plists=(
     "com.googlecode.iterm2"
     "org.macosforge.xquartz.X11"
     "org.pqrs.Karabiner"
+    "org.pqrs.Seil.plist"
 )
 
 for plist in "${plists[@]}"; do

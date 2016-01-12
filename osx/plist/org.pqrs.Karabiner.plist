@@ -4,32 +4,36 @@
 <dict>
 	<key>MigrationUtilitiesCurrentBundleIdentifer</key>
 	<string>org.pqrs.Karabiner</string>
-	<key>NSWindow Frame SUUpdateAlertFrame</key>
-	<string>672 590 575 392 0 0 1920 1178 </string>
 	<key>SUFeedURL</key>
 	<string>https://pqrs.org/osx/karabiner/files/appcast.xml</string>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-10-19T05:18:38Z</date>
-	<key>SUSkippedVersion</key>
-	<string>10.3.0</string>
+	<date>2015-11-12T05:55:13Z</date>
 	<key>configList</key>
 	<array>
 		<dict>
+			<key>appendIndex</key>
+			<integer>1</integer>
 			<key>identify</key>
-			<string>config_1403197715_220179</string>
+			<string>config_1446923502_528949</string>
 			<key>name</key>
 			<string>Default</string>
 		</dict>
 	</array>
-	<key>config_1403197715_220179</key>
+	<key>config_1446923502_528949</key>
 	<dict>
+		<key>general.dont_remap_apple_pointing</key>
+		<integer>1</integer>
 		<key>notsave.automatically_enable_keyboard_device</key>
 		<integer>1</integer>
 		<key>notsave.automatically_enable_pointing_device</key>
 		<integer>1</integer>
-		<key>parameter.keyoverlaidmodifier_timeout</key>
-		<integer>120</integer>
 		<key>private.disable_shift_commandq</key>
+		<integer>1</integer>
+		<key>private.f19_fn</key>
+		<integer>1</integer>
+		<key>private.f4_launchpad</key>
 		<integer>1</integer>
 		<key>private.finnish_symbols</key>
 		<integer>1</integer>
@@ -41,14 +45,16 @@
 		<integer>1</integer>
 		<key>private.å_to_backspace</key>
 		<integer>1</integer>
+		<key>remap.reverse_vertical_scrolling</key>
+		<integer>1</integer>
 		<key>remap.swap_commandtabcontroltab</key>
 		<integer>1</integer>
+		<key>repeat.initial_wait</key>
+		<integer>500</integer>
 		<key>repeat.wait</key>
-		<integer>43</integer>
+		<integer>50</integer>
 	</dict>
 	<key>isCheckUpdate</key>
-	<integer>0</integer>
-	<key>isQuitByHand</key>
 	<false/>
 	<key>isStatusWindowEnabled</key>
 	<false/>
@@ -57,6 +63,10 @@
 	<key>isStatusbarEnable</key>
 	<false/>
 	<key>kIsAXNotifierEnabled</key>
+	<false/>
+	<key>kIsMigratedOverwriteKeyRepeat</key>
+	<true/>
+	<key>kIsOverwriteKeyRepeat</key>
 	<false/>
 </dict>
 </plist>
