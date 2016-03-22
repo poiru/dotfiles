@@ -1,6 +1,6 @@
 settings set target.inline-breakpoint-strategy always
 
-script topsrcdir = "/Users/poiru/projects/mozilla-central"
-command source -s true "/Users/poiru/projects/mozilla-central/.lldbinit"
+script topsrcdir = "/Users/poiru/projects/mozilla-central/src"
+command source -s true "/Users/poiru/projects/mozilla-central/src/.lldbinit"
 
 settings set frame-format "frame #${frame.index}: ${frame.pc}{ ${module.file.basename}{`\x1b\x5b32m${function.name-with-args}\x1b\x5b39m${function.pc-offset}}}{ at \x1b\x5b33m${line.file.basename}:${line.number}\x1b\x5b39m}\n"
