@@ -35,6 +35,9 @@
 [commit]
   status = false
 
+[diff "bin"]
+    textconv = hexdump -v -C
+
 [core]
 	excludesfile = ~/.gitignore
 
