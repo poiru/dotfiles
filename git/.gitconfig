@@ -18,8 +18,8 @@
 	ds = diff --stat
 	h = show
 	l = log --graph --format='%C(yellow)%h%Creset %Cgreen%cr%Creset %s (%an)%C(yellow)%d%Creset'
-	p = pull --r --prune
-	puh = pull -r upstream HEAD
+	p = pull --rebase --prune
+	puh = pull --rebase upstream HEAD
 	pom = push origin master
 	rc = rebase --continue
 	ri = rebase -i
