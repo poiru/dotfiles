@@ -32,6 +32,8 @@ defaults write -g AppleMetricUnits -bool true
 
 defaults write -g AppleShowScrollBars -string WhenScrolling
 
+defaults write com.apple.universalacces reduceTransparency -bool true
+
 # Make key repeating work.
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write -g InitialKeyRepeat -int 30
@@ -64,6 +66,22 @@ defaults write -g AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/"
+
+defaults write com.apple.finder ShowRecentTags -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+defaults write com.apple.sidebarlists ShowEjectables -bool false
+
+defaults write com.apple.sidebarlists networkbrowser -dict \
+  Controller -string CustomListItems
+  CustomListProperties -dict \
+    com.apple.NetworkBrowser.backToMyMacEnabled -bool false \
+    com.apple.NetworkBrowser.bonjourEnabled -bool false \
+    com.apple.NetworkBrowser.connectedEnabled -bool false
 
 # Avoid creating .DS_Store files on network volumes.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
