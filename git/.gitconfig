@@ -33,13 +33,14 @@
 	ui = true
 
 [commit]
-  status = false
+	status = false
 
 [diff "bin"]
-    textconv = hexdump -v -C
+	textconv = hexdump -v -C
 
 [core]
 	excludesfile = ~/.gitignore
+	untrackedCache = true
 
 [push]
 	default = current
