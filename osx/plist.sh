@@ -8,6 +8,7 @@ plists=(
     "com.apple.symbolichotkeys"
     "com.divisiblebyzero.Spectacle"
     "com.googlecode.iterm2"
+    "com.lightheadsw.caffeine"
     "org.macosforge.xquartz.X11"
     "org.pqrs.Karabiner"
     "org.pqrs.Seil"

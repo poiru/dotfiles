@@ -11,9 +11,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-01-12T16:15:36Z</date>
+	<date>2016-04-28T17:55:50Z</date>
 	<key>SUSkippedVersion</key>
-	<string>12.0.0</string>
+	<string>12.1.0</string>
 	<key>sysctl</key>
 	<dict>
 		<key>enable_capslock</key>

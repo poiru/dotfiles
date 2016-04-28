@@ -170,7 +170,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-01-12T04:40:55Z</date>
+	<date>2016-04-28T15:40:44Z</date>
+	<key>SUSkippedVersion</key>
+	<string>552</string>
 	<key>StatusItemEnabled</key>
 	<false/>
 	<key>UndoLastMove</key>

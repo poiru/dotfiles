@@ -54,6 +54,13 @@
 		<key>repeat.wait</key>
 		<integer>50</integer>
 	</dict>
+	<key>config_1452622883_700544</key>
+	<dict>
+		<key>notsave.automatically_enable_keyboard_device</key>
+		<integer>1</integer>
+		<key>notsave.automatically_enable_pointing_device</key>
+		<integer>1</integer>
+	</dict>
 	<key>isCheckUpdate</key>
 	<false/>
 	<key>isStatusWindowEnabled</key>

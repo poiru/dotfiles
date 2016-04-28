@@ -256,9 +256,9 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>288 208 222 432 0 0 1920 1177 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>37 339 924 485 0 0 1920 1177 </string>
+	<string>61 457 924 485 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>960 4 960 1173 0 0 1920 1177 </string>
+	<string>1281 9 1277 1403 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 22 1382 856 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -869,7 +869,7 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>editor</string>
+				<string>best editor</string>
 				<key>editor</key>
 				<string>com.sublimetext.3</string>
 				<key>text</key>
