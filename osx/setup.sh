@@ -19,9 +19,8 @@ sudo defaults write com.apple.loginwindow LoginHook /var/root/login.sh
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
-# Disable Spotlight and hide the menu bar icon.
+# Disable indexing.
 sudo mdutil -a -i off
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Disable Notification Center.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
