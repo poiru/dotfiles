@@ -40,6 +40,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/usr/local/bin:$PATH
 fi
 
+if command -v most >/dev/null 2>&1; then
+    export PAGER=most
+fi
+
 # Change prompt to:
 #   [user: dir]
 #   $
