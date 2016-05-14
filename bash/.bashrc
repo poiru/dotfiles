@@ -35,9 +35,6 @@ export EDITOR=vim
 export LESS=FnRX
 export LESSHISTFILE=/dev/null
 
-# Make man page titles and such green.
-export LESS_TERMCAP_md=$'\E[32m'
-
 export PATH=$PATH:~/local/bin
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/usr/local/bin:$PATH
