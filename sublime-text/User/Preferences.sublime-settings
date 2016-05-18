@@ -41,7 +41,8 @@
 		"mozilla*/security/sandbox/chromium",
 		"mozilla*/testing",
 		"mozilla*/toolkit/crashreporter/google-breakpad",
-		"mozilla*/toolkit/components/protobuf"
+		"mozilla*/toolkit/components/protobuf",
+		"node_modules"
 	],
 	"highlight_line": true,
 	"index_files": false,
