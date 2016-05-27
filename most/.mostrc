@@ -2,3 +2,7 @@ color normal lightgray default
 color status lightgray black
 color underline brightred default
 color overstrike brightgreen default
+
+setkey bob "g"
+setkey eob "G"
+setkey goto_line "^g"
