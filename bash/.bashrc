@@ -78,7 +78,7 @@ alias h=hg
 alias m='I_PREFER_A_SUBOPTIMAL_MERCURIAL_EXPERIENCE=1 MOZ_QUIET=1 ./mach'
 alias s=subl
 alias sr='screen -rD'
-alias sk='ssh -t k screen -D -RR; clear'
+alias sk='ssh -t d screen -D -RR; clear'
 alias v=vim
 
 alias ..='cd ..'
