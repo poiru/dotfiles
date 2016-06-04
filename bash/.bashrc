@@ -34,7 +34,7 @@ export LS_COLORS
 
 export EDITOR=vim
 
-export LESS=FnRX
+export LESS=nRK
 export LESSHISTFILE=/dev/null
 
 export MANPAGER="~/.manpager"
