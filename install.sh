@@ -65,7 +65,6 @@ function link_common() {
     make_link "git/.gitignore"
     make_link "hg/.hgrc"
     make_link "lldb/.lldbinit"
-    make_link "most/.mostrc"
     make_link "screen/.screenrc"
     make_link "tmux/.tmux.conf"
     make_link "vim" ".vim"
