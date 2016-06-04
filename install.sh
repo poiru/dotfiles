@@ -61,6 +61,7 @@ function link_common() {
     make_link "bash/.bash_profile"
     make_link "bash/.bashrc"
     make_link "bash/.inputrc"
+    make_link "bash/manpager.sh" ".manpager"
     make_link "git/.gitconfig"
     make_link "git/.gitignore"
     make_link "hg/.hgrc"

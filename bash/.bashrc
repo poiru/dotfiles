@@ -1,3 +1,5 @@
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Bail out if this is a non-interactive shell.
 if [ -z "$PS1" ]; then
    return
@@ -34,6 +36,8 @@ export EDITOR=vim
 
 export LESS=FnRX
 export LESSHISTFILE=/dev/null
+
+export MANPAGER="~/.manpager"
 
 export PATH=$PATH:~/local/bin
 if [[ "$OSTYPE" == "darwin"* ]]; then
