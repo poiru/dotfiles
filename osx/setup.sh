@@ -12,10 +12,6 @@ sudo cp "$script_dir/logout.sh" /var/root
 sudo chmod +x /var/root/logout.sh
 sudo defaults write com.apple.loginwindow LogoutHook /var/root/logout.sh
 
-sudo cp "login.sh" /var/root
-sudo chmod +x /var/root/login.sh
-sudo defaults write com.apple.loginwindow LoginHook /var/root/login.sh
-
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
