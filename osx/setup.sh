@@ -7,6 +7,8 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Ask for the administrator password upfront.
 sudo -v
 
+sudo cp "$script_dir/Custom.keylayout" "/Library/Keyboard Layouts"
+
 # Mute on logout.
 sudo cp "$script_dir/logout.sh" /var/root
 sudo chmod +x /var/root/logout.sh
