@@ -7,9 +7,10 @@ set bind-tty-special-chars off
 set colored-stats on
 set completion-ignore-case on
 set echo-control-characters off
+set mark-symlinked-directories on
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
-set mark-symlinked-directories on
+set skip-completed-text on
 
 "\C-b": shell-backward-word
 "\C-f": shell-forward-word
