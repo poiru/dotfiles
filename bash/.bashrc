@@ -1,5 +1,3 @@
-script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 # Bail out if this is a non-interactive shell.
 if [ -z "$PS1" ]; then
    return
@@ -75,7 +73,7 @@ alias adu='sudo apt-get update &&
 alias c=cd
 alias g=git
 alias h=hg
-alias m='I_PREFER_A_SUBOPTIMAL_MERCURIAL_EXPERIENCE=1 MOZ_QUIET=1 ./mach'
+alias m='MOZ_QUIET=1 ./mach'
 alias s=subl
 alias sr='screen -rD'
 alias sk='ssh -t d screen -D -RR; clear'
