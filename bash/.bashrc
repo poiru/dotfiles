@@ -83,13 +83,17 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias cb='xclip -selection c'
-alias ls='ls --color=auto'
-alias o=xdg-open
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias cb='pbcopy'
     alias ls='gls --color=auto'
     alias o=open
+
+    alias rm='echo use trash'
+    alias t=trash
+else
+    alias cb='xclip -selection c'
+    alias ls='ls --color=auto'
+    alias o=xdg-open
 fi
 
 alias C='set -f -B; _calc '
