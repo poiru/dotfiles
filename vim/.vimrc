@@ -58,6 +58,12 @@ set whichwrap+=<,>,h,l,[,]
 set virtualedit=block,onemore
 
 "
+" Mappings
+"
+
+map <C-q> {gq}
+
+"
 " Autocommands
 "
 
