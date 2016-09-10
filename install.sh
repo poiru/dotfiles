@@ -91,6 +91,7 @@ function link_local() {
         make_link "xquartz/.gtkrc-2.0"
         make_link "xquartz/.Xmodmap"
         make_link "xquartz/.Xresources"
+        make_link "vscode/User" "Library/Application Support/Code/User"
     fi
 }
 

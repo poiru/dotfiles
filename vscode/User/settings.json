@@ -1,0 +1,9 @@
+{
+    "editor.tabSize": 2,
+    "editor.wordWrap": true,
+    "editor.renderWhitespace": true,
+    "editor.renderIndentGuides": true,
+    "git.enabled": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false
+}
