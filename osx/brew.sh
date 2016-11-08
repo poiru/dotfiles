@@ -7,19 +7,17 @@ brew doctor
 
 brew install \
     bash \
-    bash-completion2 \
+    homebrew/versions/bash-completion2 \
     ccache \
     clang-format \
     coreutils \
     git \
     gnu-sed \
     mercurial \
-    rsync \
+    homebrew/dupes/rsync \
     ssh-copy-id \
     the_silver_searcher \
-    tmux \
     tig \
-    trash \
     tree \
     unison \
     wget
