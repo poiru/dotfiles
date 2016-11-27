@@ -1,9 +1,13 @@
 {
+    "editor.renderIndentGuides": true,
+    "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
     "editor.wordWrap": true,
-    "editor.renderWhitespace": true,
-    "editor.renderIndentGuides": true,
     "git.enabled": false,
+    "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false
-}
+    "typescript.check.tscVersion": false,
+    "window.zoomLevel": 0,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showTabs": false
+  }
