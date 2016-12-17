@@ -33,7 +33,7 @@ sudo tmutil disablelocal
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
 defaults write -g AppleInterfaceStyle -string "Dark"
-defaults write -g AppleLocale -string "en_FI"
+defaults write -g AppleLocale -string "en_IE"
 defaults write -g AppleMeasurementUnits -string "Centimeters"
 defaults write -g AppleMetricUnits -bool true
 
