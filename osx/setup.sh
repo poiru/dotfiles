@@ -26,6 +26,9 @@ sudo pmset -a standbydelay 60
 sudo pmset -a hibernatemode 25
 sudo pmset -a destroyfvkeyonstandby 1
 
+# Disable local Time Machine backups.
+sudo tmutil disablelocal
+
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
