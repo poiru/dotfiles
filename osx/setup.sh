@@ -32,12 +32,6 @@ sudo tmutil disablelocal
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
-# Disable indexing.
-sudo mdutil -a -i off
-
-# Disable Notification Center.
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
-
 defaults write -g AppleInterfaceStyle -string "Dark"
 defaults write -g AppleLocale -string "en_FI"
 defaults write -g AppleMeasurementUnits -string "Centimeters"
@@ -89,13 +83,6 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 defaults write com.apple.sidebarlists ShowEjectables -bool false
 
-defaults write com.apple.sidebarlists networkbrowser -dict \
-  Controller -string CustomListItems
-  CustomListProperties -dict \
-    com.apple.NetworkBrowser.backToMyMacEnabled -bool false \
-    com.apple.NetworkBrowser.bonjourEnabled -bool false \
-    com.apple.NetworkBrowser.connectedEnabled -bool false
-
 # Avoid creating .DS_Store files on network volumes.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
@@ -113,10 +100,6 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # Disable Dashboard.
 defaults write com.apple.dashboard mcx-disabled -bool true
 
-# Disable AirDrop and AWDL.
-defaults write com.apple.NetworkBrowser DisableAirDrop -bool true
-sudo ifconfig awdl0 down
-
 # Don’t show Dashboard as a Space.
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
@@ -130,9 +113,6 @@ defaults write com.apple.dock autohide-time-modifier -float 0.4
 defaults write com.apple.dock orientation -string "bottom"
 defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock tilesize -int 48
-
-# Disable XCode indexing.
-defaults write com.apple.dt.XCode IDEIndexDisable -int 1
 
 # Ask for password after screensaver appears.
 defaults write com.apple.screensaver askForPassword -int 1
