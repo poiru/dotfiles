@@ -20,6 +20,12 @@ sudo defaults write com.apple.loginwindow LogoutHook /var/root/logout.sh
 # Disable Power Nap.
 sudo pmset -a darkwakes 0
 
+# Hibernate after sleeping for a bit.
+sudo pmset -a standby 1
+sudo pmset -a standbydelay 60
+sudo pmset -a hibernatemode 25
+sudo pmset -a destroyfvkeyonstandby 1
+
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
