@@ -5,6 +5,7 @@ user_pref("browser.pocket.enabled", false);
 user_pref("browser.readinglist.enabled", false);
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.selfsupport.url", "");
+user_pref("browser.sessionstore.interval", 1800000);
 user_pref("browser.showQuitWarning", true);
 user_pref("browser.startup.homepage", "about:blank");
 user_pref("browser.tabs.animate", false);
