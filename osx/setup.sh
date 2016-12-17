@@ -9,7 +9,10 @@ sudo -v
 
 sudo cp "$script_dir/Custom.keylayout" "/Library/Keyboard Layouts"
 
-# Mute on logout.
+sudo cp "$script_dir/login.sh" /var/root
+sudo chmod +x /var/root/login.sh
+sudo defaults write com.apple.loginwindow LoginHook /var/root/login.sh
+
 sudo cp "$script_dir/logout.sh" /var/root
 sudo chmod +x /var/root/logout.sh
 sudo defaults write com.apple.loginwindow LogoutHook /var/root/logout.sh
