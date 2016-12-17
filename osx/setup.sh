@@ -17,6 +17,9 @@ sudo cp "$script_dir/logout.sh" /var/root
 sudo chmod +x /var/root/logout.sh
 sudo defaults write com.apple.loginwindow LogoutHook /var/root/logout.sh
 
+# Disable Power Nap.
+sudo pmset -a darkwakes 0
+
 # Don't reopen windows when logging back in.
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
