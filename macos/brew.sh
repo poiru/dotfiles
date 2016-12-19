@@ -26,6 +26,10 @@ brew install \
     wget
 
 brew cask install \
+    adobe-creative-cloud \
+    caskroom/versions/firefox-beta \
+    caskroom/versions/google-chrome-beta \
+    caskroom/versions/sketch-beta \
     dash \
     flux \
     imageoptim \
