@@ -41,7 +41,7 @@ defaults write -g AppleMetricUnits -bool true
 
 defaults write -g AppleShowScrollBars -string WhenScrolling
 
-defaults write com.apple.universalacces reduceTransparency -bool true
+defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Make key repeating work.
 defaults write -g ApplePressAndHoldEnabled -bool false
