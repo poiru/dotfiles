@@ -2,6 +2,7 @@
     "editor.renderIndentGuides": true,
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
+    "editor.rulers": [80],
     "editor.wordWrap": true,
     "git.enabled": false,
     "telemetry.enableCrashReporter": false,
@@ -9,5 +10,7 @@
     "typescript.check.tscVersion": false,
     "window.zoomLevel": 0,
     "workbench.editor.enablePreview": false,
-    "workbench.editor.showTabs": false
+    "workbench.editor.showTabs": false,
+    "workbench.activityBar.visible": false,
+    "window.titleBarStyle": "native"
   }
