@@ -15,6 +15,7 @@ brew install \
     gnu-sed \
     homebrew/dupes/rsync \
     homebrew/versions/bash-completion2 \
+    mas \
     mercurial \
     python \
     ssh-copy-id \
