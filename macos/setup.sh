@@ -18,13 +18,15 @@ sudo chmod +x /var/root/logout.sh
 sudo defaults write com.apple.loginwindow LogoutHook /var/root/logout.sh
 
 # Disable Power Nap.
-sudo pmset -a darkwakes 0
+sudo pmset -a powernap 0
 
 # Hibernate after sleeping for a bit.
-sudo pmset -a standby 1
-sudo pmset -a standbydelay 60
-sudo pmset -a hibernatemode 25
+sudo pmset -a standby 1 standbydelay 900 hibernatemode 3
 sudo pmset -a destroyfvkeyonstandby 1
+
+# Ask for password after screensaver appears.
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Disable local Time Machine backups.
 sudo tmutil disablelocal
@@ -113,10 +115,6 @@ defaults write com.apple.dock autohide-time-modifier -float 0.4
 defaults write com.apple.dock orientation -string "bottom"
 defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock tilesize -int 48
-
-# Ask for password after screensaver appears.
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 1
 
 # Expand save/print panels by default.
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
