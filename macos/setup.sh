@@ -130,6 +130,10 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0.0
 defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
 
+# Disable chime when plugging in power cable.
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool false
+killall "PowerChime"
+
 # Safari preferences.
 defaults write com.apple.Safari HistoryAgeInDaysLimit -int 1
 defaults write com.apple.Safari HomePage -string "about:blank"
