@@ -121,7 +121,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Dock preferences.
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
-defaults write com.apple.dock autohide-time-modifier -float 0.4
+defaults write com.apple.dock autohide-time-modifier -float 0.3
 defaults write com.apple.dock orientation -string "bottom"
 defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock tilesize -int 48
