@@ -70,6 +70,19 @@ defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 0
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 0
 defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGesture -int 0
 
+# Disable Touch Bar support in all apps except System Preferences.
+defaults write -g NSFunctionBarAPIEnabled -bool NO
+defaults write com.apple.systempreferences NSFunctionBarAPIEnabled -bool YES
+
+# Clear the default Touch Bar items and put the relevant things in the
+# expanded area.
+defaults write com.apple.controlstrip MiniCustomized -array
+defaults write com.apple.controlstrip FullCustomized -array \
+  "NSTouchBarItemIdentifierFlexibleSpace" \
+  "com.apple.system.group.keyboard-brightness" \
+  "com.apple.system.group.brightness" \
+  "com.apple.system.group.volume"
+
 # Enable full keyboard access for all controls.
 defaults write -g AppleKeyboardUIMode -int 3
 
