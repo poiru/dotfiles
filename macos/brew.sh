@@ -7,17 +7,31 @@ brew doctor
 
 brew install \
     bash \
-    homebrew/versions/bash-completion2 \
     ccache \
     clang-format \
     coreutils \
+    encfs \
     git \
     gnu-sed \
-    mercurial \
     homebrew/dupes/rsync \
+    homebrew/versions/bash-completion2 \
+    mercurial \
+    python \
     ssh-copy-id \
     the_silver_searcher \
     tig \
     tree \
     unison \
     wget
+
+brew cask install \
+    dash \
+    flux \
+    imageoptim \
+    iterm2 \
+    karabiner-elements \
+    keepassx \
+    osxfuse \
+    spectacle \
+    sublime-text \
+    vlc
