@@ -85,7 +85,7 @@ function link_local() {
         make_link "x/.xscreensaver"
         make_link "x/.xsessionrc"
     elif [[ "$OSTYPE" == "darwin"* ]]; then
-        make_link "karabiner/private.xml" "Library/Application Support/Karabiner/private.xml"
+        make_link "karabiner/karabiner.json" ".config/karabiner/karabiner.json"
         make_link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages/User"
         make_link "xcode/Tomorrow Night.dvtcolortheme" "Library/Developer/Xcode/UserData/FontAndColorThemes/Tomorrow Night.dvtcolortheme"
         make_link "xquartz/.gtkrc-2.0"

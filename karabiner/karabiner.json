@@ -1,0 +1,56 @@
+{
+    "profiles": [
+        {
+            "devices": [
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 632,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 34304,
+                        "vendor_id": 1452
+                    },
+                    "ignore": true
+                }
+            ],
+            "fn_function_keys": {
+                "f1": "vk_consumer_brightness_down",
+                "f10": "mute",
+                "f11": "volume_down",
+                "f12": "volume_up",
+                "f2": "vk_consumer_brightness_up",
+                "f3": "vk_mission_control",
+                "f4": "vk_launchpad",
+                "f5": "vk_consumer_illumination_down",
+                "f6": "vk_consumer_illumination_up",
+                "f7": "vk_consumer_previous",
+                "f8": "vk_consumer_play",
+                "f9": "vk_consumer_next"
+            },
+            "name": "Default profile",
+            "selected": true,
+            "simple_modifications": {
+                "backslash": "page_down",
+                "caps_lock": "left_option",
+                "close_bracket": "page_up",
+                "grave_accent_and_tilde": "escape",
+                "left_command": "left_control",
+                "left_control": "left_command",
+                "open_bracket": "delete_or_backspace"
+            },
+            "virtual_hid_keyboard": {
+                "keyboard_type": "ansi"
+            }
+        }
+    ]
+}
