@@ -24,6 +24,9 @@ sudo pmset -a powernap 0
 sudo pmset -a standby 1 standbydelay 900 hibernatemode 3
 sudo pmset -a destroyfvkeyonstandby 1
 
+# Wake up only when power button is pressed.
+sudo pmset -a acwake 0 lidwake 0
+
 # Ask for password after screensaver appears.
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
