@@ -76,6 +76,7 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGestu
 # Disable Touch Bar support in all apps except System Preferences.
 defaults write -g NSFunctionBarAPIEnabled -bool NO
 defaults write com.apple.systempreferences NSFunctionBarAPIEnabled -bool YES
+defaults write com.apple.iTunes NSFunctionBarAPIEnabled -bool YES
 
 # Clear the default Touch Bar items and put the relevant things in the
 # expanded area.
