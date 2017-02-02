@@ -60,7 +60,6 @@ esac
 HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=1000
 HISTFILESIZE=2000
-HISTIGNORE="C *:\\*:g *:s *:rg *"
 
 unset MAILCHECK
 
