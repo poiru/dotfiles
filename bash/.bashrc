@@ -37,7 +37,7 @@ export LESSHISTFILE=/dev/null
 
 export MANPAGER="~/.manpager"
 
-export PATH=$PATH:~/local/bin
+export PATH=$PATH:$HOME/.cargo/bin:~/local/bin
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/usr/local/bin:$PATH
 fi
