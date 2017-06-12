@@ -1,16 +1,27 @@
 {
+    "editor.cursorBlinking": "solid",
+    "editor.minimap.enabled": false,
     "editor.renderIndentGuides": true,
     "editor.renderWhitespace": "boundary",
-    "editor.tabSize": 2,
     "editor.rulers": [80],
-    "editor.wordWrap": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
     "git.enabled": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "typescript.check.tscVersion": false,
+    "window.titleBarStyle": "native",
     "window.zoomLevel": 0,
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.showTabs": false,
     "workbench.activityBar.visible": false,
-    "window.titleBarStyle": "native"
-  }
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showIcons": false,
+    "workbench.editor.showTabs": false,
+    "workbench.iconTheme": null,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/*.js": { "when": "$(basename).ts"}
+    }
+}
