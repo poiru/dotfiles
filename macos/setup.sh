@@ -155,7 +155,8 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 
 # Sound preferences.
 defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0.0
-defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
+defaults write -g com.apple.sound.uiaudio.enabled -int 0
+defaults write -g com.apple.sound.beep.volume -int 0
 
 # Disable chime when plugging in power cable.
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool false
