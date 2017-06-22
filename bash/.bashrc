@@ -76,7 +76,7 @@ alias h=hg
 alias m='MOZ_QUIET=1 ./mach'
 alias s=subl
 alias sr='screen -rD'
-alias sk='ssh -t d screen -D -RR; clear'
+alias sk='ssh -t a screen -D -RR; clear'
 alias v=vim
 
 alias ..='cd ..'
