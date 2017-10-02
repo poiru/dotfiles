@@ -1,0 +1,18 @@
+/* Get rid of unnecessary cruft in the Gmail print view (logo, header, etc.) */
+@-moz-document domain(mail.google.com) {
+  .bodycontainer > table,
+  .bodycontainer > hr,
+  .maincontent > table:nth-of-type(1),
+  .maincontent > hr,
+  .message > tbody > tr:nth-of-type(1),
+  .message > tbody > tr:nth-of-type(2) {
+    display: none;
+    visibility: collapse;
+  }
+
+  body,
+  .message > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) {
+    margin: 0;
+    padding: 0;
+  }
+}

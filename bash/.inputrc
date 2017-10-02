@@ -28,6 +28,9 @@ set skip-completed-text on
 "\e\e[C": forward-word
 "\e\e[D": backward-word
 
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
 # Macros.
 "\el": "\C-e | less\C-m"
 "\et": " |& tee -a "
