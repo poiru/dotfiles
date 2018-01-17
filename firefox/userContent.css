@@ -16,3 +16,9 @@
     padding: 0;
   }
 }
+
+@-moz-document url-prefix(about:) {
+  body.activity-stream {
+    display: none;
+  }
+}
