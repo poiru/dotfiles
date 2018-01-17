@@ -22,6 +22,7 @@
 	p = pull --rebase --prune
 	puh = pull --rebase upstream HEAD
 	pom = push origin master
+	pf = push --force origin
 	rc = rebase --continue
 	ri = rebase -i
 	rh = reset HEAD
