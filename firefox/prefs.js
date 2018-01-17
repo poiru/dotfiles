@@ -15,6 +15,7 @@ user_pref("browser.uitour.enabled", false);
 user_pref("datareporting.healthreport.service.enabled", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
+user_pref("extensions.shield-recipe-client.enabled", false);
 user_pref("loop.enabled", false);
 user_pref("network.cookie.cookieBehavior", 3);
 user_pref("network.cookie.lifetimePolicy", 2);
