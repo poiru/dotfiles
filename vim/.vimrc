@@ -14,6 +14,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+set backspace=indent,eol,start
+
 set viminfo=
 
 "
