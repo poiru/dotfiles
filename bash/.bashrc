@@ -87,8 +87,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias cb='pbcopy'
     alias ls='gls --color=auto'
     alias o=open
-
-    alias rm='echo use trash'
     alias t=trash
 else
     alias cb='xclip -selection c'
