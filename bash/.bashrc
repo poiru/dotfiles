@@ -76,7 +76,7 @@ alias h=hg
 alias m='MOZ_QUIET=1 ./mach'
 alias s=subl
 alias sr='screen -rD'
-alias sk='ssh -t a screen -D -RR; clear'
+alias sk='ssh -t k screen -D -RR; clear'
 alias v=vim
 
 alias ..='cd ..'
@@ -136,7 +136,7 @@ function sourceif() {
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # bash-completion2 doesn't play all that well with older Bashes.
     if (( BASH_VERSINFO[0] >= 4 )); then
-        sourceif /usr/local/share/bash-completion/bash_completion
+        sourceif /usr/local/etc/profile.d/bash_completion.sh
     fi
 elif [[ "$OSTYPE" != "msys" ]]; then
     # bash_completion is automatically loaded by msys.
