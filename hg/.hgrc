@@ -1,5 +1,7 @@
 [ui]
-username = Birunthan Mohanathas <birunthan@mohanathas.com>
+username = Biru Mohanathas <birunthan@mohanathas.com>
+interface = curses
+tweakdefaults = true
 
 [alias]
 d = !$HG diff

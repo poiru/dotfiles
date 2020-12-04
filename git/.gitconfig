@@ -1,5 +1,5 @@
 [user]
-	name = Birunthan Mohanathas
+	name = Biru Mohanathas
 	email = birunthan@mohanathas.com
 
 [alias]
@@ -58,3 +58,5 @@
 
 [status]
 	showUntrackedFiles = all
+[pull]
+	ff = only
