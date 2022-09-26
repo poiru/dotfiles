@@ -39,7 +39,7 @@ export MANPAGER="~/.manpager"
 
 export PATH=$PATH:$HOME/.cargo/bin:~/local/bin
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH=/usr/local/bin:$PATH
+    export PATH=/opt/homebrew/bin:$PATH
 fi
 
 # Change prompt to:
@@ -136,7 +136,7 @@ function sourceif() {
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # bash-completion2 doesn't play all that well with older Bashes.
     if (( BASH_VERSINFO[0] >= 4 )); then
-        sourceif /usr/local/etc/profile.d/bash_completion.sh
+        sourceif /opt/homebrew/etc/profile.d/bash_completion.sh
     fi
 elif [[ "$OSTYPE" != "msys" ]]; then
     # bash_completion is automatically loaded by msys.
@@ -158,7 +158,7 @@ function _custom_completion_loader() {
     case $cmd in
         g|git)
             if [[ "$OSTYPE" == "darwin"* ]]; then
-                . /usr/local/etc/bash_completion.d/git-completion.bash
+                . /opt/homebrew/etc/bash_completion.d/git-completion.bash
             elif [ -f "/etc/bash_completion.d/git" ]; then
                 . /etc/bash_completion.d/git
             else
