@@ -1,7 +1,0 @@
-#tabbrowser-tabs .tab-line[selected=true] {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-.titlebar-placeholder[type="pre-tabs"] {
-  max-width: 10px;
-}

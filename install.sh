@@ -4,17 +4,6 @@ set -o errexit -o pipefail
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-function usage() {
-    cat <<EOF
-install.sh [options]
-
-    -c            link common files such as .gitconfig and .vimrc
-    -l            link local files such as .xmodmaprc and terminalrc
-    -h, --help    this help
-
-EOF
-}
-
 function make_link() {
     local source="$script_dir/$1"
     local target="$HOME/$2"
@@ -57,52 +46,13 @@ function make_link() {
     ln -s "$source" "$target"
 }
 
-function link_common() {
-    make_link "bash/.bash_profile"
-    make_link "bash/.bashrc"
-    make_link "bash/.inputrc"
-    make_link "bash/manpager.sh" ".manpager"
-    make_link "git/.gitconfig"
-    make_link "git/.gitignore"
-    make_link "hg/.hgrc"
-    make_link "lldb/.lldbinit"
-    make_link "screen/.screenrc"
-    make_link "tmux/.tmux.conf"
-    make_link "vim" ".vim"
-    make_link "vim/.vimrc"
-
-    if command -v irssi > /dev/null; then
-        make_link "irssi/default.theme" ".irssi/default.theme"
-    fi
-}
-
-function link_local() {
-    if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        make_link "fontconfig/fonts.conf" ".config/fontconfig/fonts.conf"
-        make_link "sublime-text/User" ".config/sublime-text-3/Packages/User"
-        make_link "xfce/terminal" ".config/xfce4/terminal"
-        make_link "x/.xmodmaprc"
-        make_link "x/.xscreensaver"
-        make_link "x/.xsessionrc"
-    elif [[ "$OSTYPE" == "darwin"* ]]; then
-        make_link "karabiner/karabiner.json" ".config/karabiner/karabiner.json"
-        make_link "sublime-text/User" "Library/Application Support/Sublime Text 3/Packages/User"
-        make_link "xcode/Tomorrow Night.dvtcolortheme" "Library/Developer/Xcode/UserData/FontAndColorThemes/Tomorrow Night.dvtcolortheme"
-        make_link "xquartz/.gtkrc-2.0"
-        make_link "xquartz/.Xmodmap"
-        make_link "xquartz/.Xresources"
-        make_link "vscode/User" "Library/Application Support/Code/User"
-    fi
-}
-
-if (("$#" == 0)) || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
-    usage
-    exit 0
-fi
-
-while getopts clr opt; do
-    case $opt in
-        c) link_common;;
-        l) link_local;;
-    esac
-done
+make_link "bash/.bash_profile"
+make_link "bash/.bashrc"
+make_link "bash/.inputrc"
+make_link "bash/manpager.sh" ".manpager"
+make_link "git/.gitconfig"
+make_link "git/.gitignore"
+make_link "lldb/.lldbinit"
+make_link "screen/.screenrc"
+make_link "vim" ".vim"
+make_link "vim/.vimrc"

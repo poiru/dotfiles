@@ -1,7 +1,0 @@
-! Map Command_L to Control_L.
-clear Mod2
-clear control
-keycode 63 = Control_L
-keycode 67 = Control_L
-keycode 70 = Control_L
-add control = Control_L
