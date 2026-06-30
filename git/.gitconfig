@@ -17,6 +17,8 @@
 	d = diff
 	dc = diff --cached
 	ds = diff --stat
+	f = fetch origin
+	fc = !git fetch origin $1 && git checkout -B $1 origin/$1 && :
 	h = show
 	l = log --graph --format='%C(yellow)%h%Creset %Cgreen%cr%Creset %s (%an)%C(yellow)%d%Creset'
 	p = pull --rebase --prune
