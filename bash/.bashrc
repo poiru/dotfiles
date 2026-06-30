@@ -129,57 +129,19 @@ function sourceif() {
     echo "sourceif: Not found: '$@'"
 }
 
-# Set COMPAT_DIR to an non-existent directory to avoid loading unnecessary
-# auto-completion scripts. This makes Bash initialization considerably faster.
-[ -z "${BASH_COMPLETION_COMPAT_DIR}" ] && BASH_COMPLETION_COMPAT_DIR="/none"
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    # bash-completion2 doesn't play all that well with older Bashes.
-    if (( BASH_VERSINFO[0] >= 4 )); then
-        sourceif /opt/homebrew/etc/profile.d/bash_completion.sh
-    fi
-elif [[ "$OSTYPE" != "msys" ]]; then
-    # bash_completion is automatically loaded by msys.
-    sourceif /usr/share/bash-completion/bash_completion \
-             /etc/bash_completion
+    sourceif /opt/homebrew/etc/profile.d/bash_completion.sh
 fi
 
 # Make auto-completion work for names with colons.
 COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
 
 # Make auto-completion work with a few aliases.
-complete -F _cd -o nospace c
-if function_exists "_completion_loader"; then
-    complete -D -F _custom_completion_loader
+if function_exists "_comp_load"; then
+    _comp_load cd
+    complete -F _comp_cmd_cd -o nospace c
+
+    if function_exists "__git_complete"; then
+        __git_complete g __git_main
+    fi
 fi
-
-function _custom_completion_loader() {
-    local cmd=$1
-    case $cmd in
-        g|git)
-            if [[ "$OSTYPE" == "darwin"* ]]; then
-                . /opt/homebrew/etc/bash_completion.d/git-completion.bash
-            elif [ -f "/etc/bash_completion.d/git" ]; then
-                . /etc/bash_completion.d/git
-            else
-                _completion_loader git
-            fi
-
-            if function_exists "__git_complete"; then
-                __git_complete g __git_main
-            else
-                complete -o bashdefault -o default -o nospace -F _git g
-            fi
-            ;;
-        h|hg)
-            sourceif /etc/bash_completion.d/mercurial \
-                     /usr/local/etc/bash_completion.d/hg-completion.bash
-            complete -o bashdefault -o default -o nospace -F _hg h
-            ;;
-        *)
-            _completion_loader $cmd
-            ;;
-    esac
-
-    return 124
-}
